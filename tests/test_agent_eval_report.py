@@ -1,6 +1,7 @@
 """Hard report gates and baseline corruption, not mirror-only formatting tests."""
 
 import asyncio
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -166,8 +167,10 @@ def test_safe_output_and_cli_no_implicit_live(report, tmp_path):
         assert exit_status(status) == code
 
 
-def test_fresh_process_offline_bootstrap_and_legacy_no_report():
-    """Fresh imports must not install app file logging or fail on tempfile writes."""
+def test_fresh_process_offline_bootstrap_and_legacy_no_report(tmp_path: Path):
+    """Fresh imports must not write mem0 state or install app file logging."""
+    missing_mem0 = tmp_path / "missing-mem0"
+    environment = {**os.environ, "MEM0_DIR": str(missing_mem0), "MEM0_TELEMETRY": "true"}
     commands = [
         [
             sys.executable,
@@ -180,10 +183,17 @@ def test_fresh_process_offline_bootstrap_and_legacy_no_report():
     ]
     for command in commands:
         process = subprocess.run(
-            command, capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=60
+            command,
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+            timeout=60,
+            env=environment,
         )
         assert process.returncode == 0, process.stderr[-1000:]
         assert "Logging error" not in process.stderr
+        assert not missing_mem0.exists()
 
 
 def test_fake_judge_missing_duplicate_and_foreign_association(report):
