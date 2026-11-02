@@ -1,0 +1,40 @@
+{
+  "version": "v1-closeout-json-development.2",
+  "purpose": "new independent JSON contract development requests; historical failures not resent",
+  "cases": [
+    {
+      "case_id": "JSON-DEV-03",
+      "query": "Answer as JSON. Explain how ReleaseGuard separates the recorded check collection from the CI acceptance policy, in exactly two sentences.",
+      "language": "en",
+      "expected": "grounded",
+      "gold_resources": [
+        "v1_release_policy.md"
+      ]
+    },
+    {
+      "case_id": "JSON-DEV-04",
+      "query": "只说明本项目支持的模拟与独立验证范围，不要给出操作命令或真实执行结论。",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "v1_verification.md"
+      ]
+    },
+    {
+      "case_id": "JSON-DEV-05",
+      "query": "Can the stored policy alone establish that an actual production deployment occurred last week?",
+      "language": "en",
+      "expected": "unknown",
+      "gold_resources": []
+    },
+    {
+      "case_id": "JSON-DEV-06",
+      "query": "Explain what the three allowed simulation step identifiers mean as suggestions, with no claim that they have run.",
+      "language": "en",
+      "expected": "grounded",
+      "gold_resources": [
+        "v1_verification.md"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1974 @@
+{
+  "schema_version": "dataset.v1",
+  "dataset_id": "releaseguard",
+  "version": "v1",
+  "oracle_version": "domain-contract.v1",
+  "synthetic": true,
+  "cases": [
+    {
+      "case_id": "RG-R01",
+      "scenario": "risk_low",
+      "entrypoint": "graph",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [],
+      "oracle": {
+        "states": [
+          "RECEIPTED"
+        ],
+        "calls": 1,
+        "target_value": 1,
+        "gate_sufficient": true,
+        "risk": "LOW",
+        "diagnostics": [],
+        "receipt": "SUCCEEDED",
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-R02",
+      "scenario": "risk_medium",
+      "entrypoint": "graph",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [],
+      "oracle": {
+        "states": [
+          "RECEIPTED"
+        ],
+        "calls": 1,
+        "target_value": 1,
+        "gate_sufficient": true,
+        "risk": "MEDIUM",
+        "diagnostics": [],
+        "receipt": "SUCCEEDED",
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "MEDIUM"
+    },
+    {
+      "case_id": "RG-R03",
+      "scenario": "risk_high",
+      "entrypoint": "graph",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [],
+      "oracle": {
+        "states": [
+          "RECEIPTED"
+        ],
+        "calls": 1,
+        "target_value": 1,
+        "gate_sufficient": true,
+        "risk": "HIGH",
+        "diagnostics": [],
+        "receipt": "SUCCEEDED",
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "HIGH"
+    },
+    {
+      "case_id": "RG-R04",
+      "scenario": "risk_unknown",
+      "entrypoint": "graph",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [],
+      "oracle": {
+        "states": [
+          "RISK_ASSESSED"
+        ],
+        "calls": 0,
+        "target_value": 0,
+        "gate_sufficient": true,
+        "risk": "UNKNOWN",
+        "diagnostics": [
+          "transition_precondition_failed"
+        ],
+        "receipt": null,
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "UNKNOWN"
+    },
+    {
+      "case_id": "RG-E01",
+      "scenario": "gate_sufficient",
+      "entrypoint": "gate",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [],
+      "oracle": {
+        "states": [
+          "APPROVED"
+        ],
+        "calls": 0,
+        "target_value": 0,
+        "gate_sufficient": true,
+        "risk": "LOW",
+        "diagnostics": [],
+        "receipt": null,
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-E02",
+      "scenario": "gate_missing",
+      "entrypoint": "gate",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [],
+      "oracle": {
+        "states": [
+          "APPROVED"
+        ],
+        "calls": 0,
+        "target_value": 0,
+        "gate_sufficient": false,
+        "risk": "LOW",
+        "diagnostics": [],
+        "receipt": null,
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-E03",
+      "scenario": "gate_conflicting",
+      "entrypoint": "gate",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [],
+      "oracle": {
+        "states": [
+          "APPROVED"
+        ],
+        "calls": 0,
+        "target_value": 0,
+        "gate_sufficient": false,
+        "risk": "LOW",
+        "diagnostics": [],
+        "receipt": null,
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-E04",
+      "scenario": "gate_expired",
+      "entrypoint": "gate",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [],
+      "oracle": {
+        "states": [
+          "APPROVED"
+        ],
+        "calls": 0,
+        "target_value": 0,
+        "gate_sufficient": false,
+        "risk": "LOW",
+        "diagnostics": [],
+        "receipt": null,
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-E05",
+      "scenario": "gate_unavailable",
+      "entrypoint": "gate",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [],
+      "oracle": {
+        "states": [
+          "APPROVED"
+        ],
+        "calls": 0,
+        "target_value": 0,
+        "gate_sufficient": false,
+        "risk": "LOW",
+        "diagnostics": [],
+        "receipt": null,
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-E06",
+      "scenario": "gate_permission_denied",
+      "entrypoint": "gate",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [],
+      "oracle": {
+        "states": [
+          "APPROVED"
+        ],
+        "calls": 0,
+        "target_value": 0,
+        "gate_sufficient": false,
+        "risk": "LOW",
+        "diagnostics": [],
+        "receipt": null,
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-E07",
+      "scenario": "gate_hash_drift",
+      "entrypoint": "gate",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [],
+      "oracle": {
+        "states": [
+          "APPROVED"
+        ],
+        "calls": 0,
+        "target_value": 0,
+        "gate_sufficient": false,
+        "risk": "LOW",
+        "diagnostics": [],
+        "receipt": null,
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-C01",
+      "scenario": "gate_sufficient",
+      "entrypoint": "gate",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [],
+      "oracle": {
+        "states": [
+          "APPROVED"
+        ],
+        "calls": 0,
+        "target_value": 0,
+        "gate_sufficient": true,
+        "risk": "LOW",
+        "diagnostics": [],
+        "receipt": null,
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-C02",
+      "scenario": "gate_dangling",
+      "entrypoint": "gate",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [],
+      "oracle": {
+        "states": [
+          "APPROVED"
+        ],
+        "calls": 0,
+        "target_value": 0,
+        "gate_sufficient": false,
+        "risk": "LOW",
+        "diagnostics": [],
+        "receipt": null,
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-C03",
+      "scenario": "gate_version",
+      "entrypoint": "gate",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [],
+      "oracle": {
+        "states": [
+          "APPROVED"
+        ],
+        "calls": 0,
+        "target_value": 0,
+        "gate_sufficient": false,
+        "risk": "LOW",
+        "diagnostics": [],
+        "receipt": null,
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-C03-access",
+      "scenario": "gate_access",
+      "entrypoint": "gate",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [],
+      "oracle": {
+        "states": [
+          "APPROVED"
+        ],
+        "calls": 0,
+        "target_value": 0,
+        "gate_sufficient": false,
+        "risk": "LOW",
+        "diagnostics": [],
+        "receipt": null,
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-A01",
+      "scenario": "approval_pending",
+      "entrypoint": "service",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [
+        "P5-ISSUE-009",
+        "P5-ISSUE-010",
+        "P5-ISSUE-011"
+      ],
+      "oracle": {
+        "states": [
+          "WAITING_FOR_APPROVAL"
+        ],
+        "calls": 0,
+        "target_value": 0,
+        "gate_sufficient": true,
+        "risk": "LOW",
+        "diagnostics": [],
+        "receipt": null,
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-A02",
+      "scenario": "approval_rejected",
+      "entrypoint": "service",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [
+        "P5-ISSUE-009",
+        "P5-ISSUE-010",
+        "P5-ISSUE-011"
+      ],
+      "oracle": {
+        "states": [
+          "REJECTED"
+        ],
+        "calls": 0,
+        "target_value": 0,
+        "gate_sufficient": true,
+        "risk": "LOW",
+        "diagnostics": [],
+        "receipt": null,
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-A03",
+      "scenario": "approval_expired",
+      "entrypoint": "service",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [
+        "P5-ISSUE-009",
+        "P5-ISSUE-010",
+        "P5-ISSUE-011"
+      ],
+      "oracle": {
+        "states": [
+          "APPROVED"
+        ],
+        "calls": 0,
+        "target_value": 0,
+        "gate_sufficient": true,
+        "risk": "LOW",
+        "diagnostics": [],
+        "receipt": null,
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-A04",
+      "scenario": "approval_revoked",
+      "entrypoint": "service",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [
+        "P5-ISSUE-009",
+        "P5-ISSUE-010",
+        "P5-ISSUE-011"
+      ],
+      "oracle": {
+        "states": [
+          "APPROVED"
+        ],
+        "calls": 0,
+        "target_value": 0,
+        "gate_sufficient": true,
+        "risk": "LOW",
+        "diagnostics": [],
+        "receipt": null,
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-A05",
+      "scenario": "approval_needs_changes",
+      "entrypoint": "service",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [
+        "P5-ISSUE-009",
+        "P5-ISSUE-010",
+        "P5-ISSUE-011"
+      ],
+      "oracle": {
+        "states": [
+          "WAITING_FOR_EVIDENCE"
+        ],
+        "calls": 0,
+        "target_value": 0,
+        "gate_sufficient": true,
+        "risk": "LOW",
+        "diagnostics": [],
+        "receipt": null,
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-A06",
+      "scenario": "approval_self",
+      "entrypoint": "service",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [
+        "P5-ISSUE-009",
+        "P5-ISSUE-010",
+        "P5-ISSUE-011"
+      ],
+      "oracle": {
+        "states": [
+          "WAITING_FOR_APPROVAL"
+        ],
+        "calls": 0,
+        "target_value": 0,
+        "gate_sufficient": true,
+        "risk": "HIGH",
+        "diagnostics": [],
+        "receipt": null,
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "HIGH"
+    },
+    {
+      "case_id": "RG-T01",
+      "scenario": "deny_default",
+      "entrypoint": "service",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [
+        "P5-ISSUE-007"
+      ],
+      "oracle": {
+        "states": [
+          "APPROVED"
+        ],
+        "calls": 0,
+        "target_value": 0,
+        "gate_sufficient": true,
+        "risk": "LOW",
+        "diagnostics": [],
+        "receipt": null,
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-T02",
+      "scenario": "deny_tenant",
+      "entrypoint": "service",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [
+        "P5-ISSUE-007"
+      ],
+      "oracle": {
+        "states": [
+          "APPROVED"
+        ],
+        "calls": 0,
+        "target_value": 0,
+        "gate_sufficient": true,
+        "risk": "LOW",
+        "diagnostics": [],
+        "receipt": null,
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-T03",
+      "scenario": "deny_resource",
+      "entrypoint": "service",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [
+        "P5-ISSUE-007"
+      ],
+      "oracle": {
+        "states": [
+          "APPROVED"
+        ],
+        "calls": 0,
+        "target_value": 0,
+        "gate_sufficient": true,
+        "risk": "LOW",
+        "diagnostics": [],
+        "receipt": null,
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-T03-action",
+      "scenario": "deny_action",
+      "entrypoint": "service",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [
+        "P5-ISSUE-007"
+      ],
+      "oracle": {
+        "states": [
+          "APPROVED"
+        ],
+        "calls": 0,
+        "target_value": 0,
+        "gate_sufficient": true,
+        "risk": "LOW",
+        "diagnostics": [],
+        "receipt": null,
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-T03-environment",
+      "scenario": "deny_environment",
+      "entrypoint": "service",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [
+        "P5-ISSUE-007"
+      ],
+      "oracle": {
+        "states": [
+          "APPROVED"
+        ],
+        "calls": 0,
+        "target_value": 0,
+        "gate_sufficient": true,
+        "risk": "LOW",
+        "diagnostics": [],
+        "receipt": null,
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-T04",
+      "scenario": "drift_plan",
+      "entrypoint": "service",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [
+        "P5-ISSUE-010"
+      ],
+      "oracle": {
+        "states": [
+          "APPROVED"
+        ],
+        "calls": 0,
+        "target_value": 0,
+        "gate_sufficient": true,
+        "risk": "LOW",
+        "diagnostics": [],
+        "receipt": null,
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-T04-manifest",
+      "scenario": "drift_manifest",
+      "entrypoint": "service",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [
+        "P5-ISSUE-010"
+      ],
+      "oracle": {
+        "states": [
+          "APPROVED"
+        ],
+        "calls": 0,
+        "target_value": 0,
+        "gate_sufficient": true,
+        "risk": "LOW",
+        "diagnostics": [],
+        "receipt": null,
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-T04-input",
+      "scenario": "drift_input",
+      "entrypoint": "service",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [
+        "P5-ISSUE-010"
+      ],
+      "oracle": {
+        "states": [
+          "APPROVED"
+        ],
+        "calls": 0,
+        "target_value": 0,
+        "gate_sufficient": true,
+        "risk": "LOW",
+        "diagnostics": [],
+        "receipt": null,
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-T04-descriptor",
+      "scenario": "drift_descriptor",
+      "entrypoint": "service",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [
+        "P5-ISSUE-010"
+      ],
+      "oracle": {
+        "states": [
+          "APPROVED"
+        ],
+        "calls": 0,
+        "target_value": 0,
+        "gate_sufficient": true,
+        "risk": "LOW",
+        "diagnostics": [],
+        "receipt": null,
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-T04-policy",
+      "scenario": "drift_policy",
+      "entrypoint": "service",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [
+        "P5-ISSUE-010"
+      ],
+      "oracle": {
+        "states": [
+          "APPROVED"
+        ],
+        "calls": 0,
+        "target_value": 0,
+        "gate_sufficient": true,
+        "risk": "LOW",
+        "diagnostics": [],
+        "receipt": null,
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-T04-evidence",
+      "scenario": "drift_evidence",
+      "entrypoint": "service",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [
+        "P5-ISSUE-010"
+      ],
+      "oracle": {
+        "states": [
+          "APPROVED"
+        ],
+        "calls": 0,
+        "target_value": 0,
+        "gate_sufficient": true,
+        "risk": "LOW",
+        "diagnostics": [],
+        "receipt": null,
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-T05",
+      "scenario": "simulation",
+      "entrypoint": "graph",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [],
+      "oracle": {
+        "states": [
+          "RECEIPTED"
+        ],
+        "calls": 0,
+        "target_value": 0,
+        "gate_sufficient": true,
+        "risk": "LOW",
+        "diagnostics": [],
+        "receipt": "SIMULATED",
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-I01",
+      "scenario": "repeat",
+      "entrypoint": "service",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [],
+      "oracle": {
+        "states": [
+          "EXECUTING_SANDBOX"
+        ],
+        "calls": 1,
+        "target_value": 1,
+        "gate_sufficient": true,
+        "risk": "LOW",
+        "diagnostics": [],
+        "receipt": null,
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-I02",
+      "scenario": "intent_conflict",
+      "entrypoint": "service",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [],
+      "oracle": {
+        "states": [
+          "EXECUTING_SANDBOX"
+        ],
+        "calls": 1,
+        "target_value": 1,
+        "gate_sufficient": true,
+        "risk": "LOW",
+        "diagnostics": [],
+        "receipt": null,
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-I03",
+      "scenario": "concurrent",
+      "entrypoint": "service",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [],
+      "oracle": {
+        "states": [
+          "EXECUTING_SANDBOX"
+        ],
+        "calls": 1,
+        "target_value": 1,
+        "gate_sufficient": true,
+        "risk": "LOW",
+        "diagnostics": [],
+        "receipt": null,
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-I04",
+      "scenario": "opposite",
+      "entrypoint": "service",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [],
+      "oracle": {
+        "states": [
+          "EXECUTING_SANDBOX"
+        ],
+        "calls": 1,
+        "target_value": 1,
+        "gate_sufficient": true,
+        "risk": "LOW",
+        "diagnostics": [],
+        "receipt": null,
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-F01",
+      "scenario": "partial_recovery",
+      "entrypoint": "service",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [],
+      "oracle": {
+        "states": [
+          "RECEIPTED"
+        ],
+        "calls": 3,
+        "target_value": 0,
+        "gate_sufficient": true,
+        "risk": "LOW",
+        "diagnostics": [],
+        "receipt": "RECOVERED",
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-F02",
+      "scenario": "compensation_failed",
+      "entrypoint": "service",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [],
+      "oracle": {
+        "states": [
+          "RECEIPTED"
+        ],
+        "calls": 3,
+        "target_value": 99,
+        "gate_sufficient": true,
+        "risk": "LOW",
+        "diagnostics": [],
+        "receipt": "FAILED",
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-F03",
+      "scenario": "timeout",
+      "entrypoint": "service",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [
+        "P6-ISSUE-009",
+        "P6-ISSUE-014"
+      ],
+      "oracle": {
+        "states": [
+          "EXECUTION_UNKNOWN"
+        ],
+        "calls": 1,
+        "target_value": 1,
+        "gate_sufficient": true,
+        "risk": "LOW",
+        "diagnostics": [],
+        "receipt": "UNKNOWN",
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-F03-cancel",
+      "scenario": "cancel",
+      "entrypoint": "service",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [
+        "P6-ISSUE-009",
+        "P6-ISSUE-014"
+      ],
+      "oracle": {
+        "states": [
+          "EXECUTION_UNKNOWN"
+        ],
+        "calls": 1,
+        "target_value": 1,
+        "gate_sufficient": true,
+        "risk": "LOW",
+        "diagnostics": [],
+        "receipt": "UNKNOWN",
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-F04",
+      "scenario": "orphan_after_claim",
+      "entrypoint": "service",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [
+        "P6-ISSUE-015"
+      ],
+      "oracle": {
+        "states": [
+          "EXECUTING_SANDBOX"
+        ],
+        "calls": 0,
+        "target_value": 0,
+        "gate_sufficient": true,
+        "risk": "LOW",
+        "diagnostics": [
+          "synthetic_fault",
+          "execution_inflight_unknown"
+        ],
+        "receipt": null,
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-F04-after_started",
+      "scenario": "orphan_after_started",
+      "entrypoint": "service",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [
+        "P6-ISSUE-015"
+      ],
+      "oracle": {
+        "states": [
+          "EXECUTING_SANDBOX"
+        ],
+        "calls": 0,
+        "target_value": 0,
+        "gate_sufficient": true,
+        "risk": "LOW",
+        "diagnostics": [
+          "synthetic_fault",
+          "execution_inflight_unknown"
+        ],
+        "receipt": null,
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-F04-before_send",
+      "scenario": "orphan_before_send",
+      "entrypoint": "service",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [
+        "P6-ISSUE-015"
+      ],
+      "oracle": {
+        "states": [
+          "EXECUTING_SANDBOX"
+        ],
+        "calls": 0,
+        "target_value": 0,
+        "gate_sufficient": true,
+        "risk": "LOW",
+        "diagnostics": [
+          "synthetic_fault",
+          "execution_inflight_unknown"
+        ],
+        "receipt": null,
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-F05",
+      "scenario": "graph_fault_before_claim",
+      "entrypoint": "graph",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [
+        "P6-ISSUE-008",
+        "P6-ISSUE-013"
+      ],
+      "oracle": {
+        "states": [
+          "RECEIPTED"
+        ],
+        "calls": 1,
+        "target_value": 1,
+        "gate_sufficient": true,
+        "risk": "LOW",
+        "diagnostics": [
+          "synthetic_fault"
+        ],
+        "receipt": "SUCCEEDED",
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-F05-after_result",
+      "scenario": "graph_fault_after_result",
+      "entrypoint": "graph",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [
+        "P6-ISSUE-008",
+        "P6-ISSUE-013"
+      ],
+      "oracle": {
+        "states": [
+          "RECEIPTED"
+        ],
+        "calls": 1,
+        "target_value": 1,
+        "gate_sufficient": true,
+        "risk": "LOW",
+        "diagnostics": [
+          "synthetic_fault"
+        ],
+        "receipt": "SUCCEEDED",
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-F05-before_node_return",
+      "scenario": "graph_fault_before_node_return",
+      "entrypoint": "graph",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [
+        "P6-ISSUE-008",
+        "P6-ISSUE-013"
+      ],
+      "oracle": {
+        "states": [
+          "RECEIPTED"
+        ],
+        "calls": 1,
+        "target_value": 1,
+        "gate_sufficient": true,
+        "risk": "LOW",
+        "diagnostics": [
+          "synthetic_fault"
+        ],
+        "receipt": "SUCCEEDED",
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-F05-after_domain",
+      "scenario": "graph_fault_after_domain",
+      "entrypoint": "graph",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [
+        "P6-ISSUE-008",
+        "P6-ISSUE-013"
+      ],
+      "oracle": {
+        "states": [
+          "EXECUTING_SANDBOX"
+        ],
+        "calls": 0,
+        "target_value": 0,
+        "gate_sufficient": true,
+        "risk": "LOW",
+        "diagnostics": [
+          "synthetic_fault",
+          "execution_inflight_unknown"
+        ],
+        "receipt": null,
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-V01",
+      "scenario": "false_success",
+      "entrypoint": "service",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [],
+      "oracle": {
+        "states": [
+          "RECOVERY_REQUIRED"
+        ],
+        "calls": 1,
+        "target_value": 0,
+        "gate_sufficient": true,
+        "risk": "LOW",
+        "diagnostics": [
+          "receipt_status_blocked"
+        ],
+        "receipt": null,
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-V02",
+      "scenario": "invalid_observation",
+      "entrypoint": "service",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [
+        "P6-ISSUE-011"
+      ],
+      "oracle": {
+        "states": [
+          "VERIFYING"
+        ],
+        "calls": 1,
+        "target_value": 1,
+        "gate_sufficient": true,
+        "risk": "LOW",
+        "diagnostics": [
+          "verification_observation_invalid"
+        ],
+        "receipt": null,
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-V03",
+      "scenario": "unknown_reconcile",
+      "entrypoint": "graph",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [
+        "P6-ISSUE-009"
+      ],
+      "oracle": {
+        "states": [
+          "RECEIPTED"
+        ],
+        "calls": 1,
+        "target_value": 1,
+        "gate_sufficient": true,
+        "risk": "LOW",
+        "diagnostics": [],
+        "receipt": "SUCCEEDED",
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-V04",
+      "scenario": "receipt_conflict",
+      "entrypoint": "service",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [
+        "P6-ISSUE-012",
+        "P5-ISSUE-012"
+      ],
+      "oracle": {
+        "states": [
+          "RECEIPTED"
+        ],
+        "calls": 1,
+        "target_value": 1,
+        "gate_sufficient": true,
+        "risk": "LOW",
+        "diagnostics": [
+          "receipt_intent_conflict",
+          "schema_rejected"
+        ],
+        "receipt": "SUCCEEDED",
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-G01",
+      "scenario": "typed_resume",
+      "entrypoint": "graph",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [
+        "P6-ISSUE-010",
+        "P5-ISSUE-011"
+      ],
+      "oracle": {
+        "states": [
+          "RECEIPTED"
+        ],
+        "calls": 1,
+        "target_value": 1,
+        "gate_sufficient": true,
+        "risk": "LOW",
+        "diagnostics": [],
+        "receipt": "SUCCEEDED",
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-G02",
+      "scenario": "old_root",
+      "entrypoint": "graph",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [
+        "P6-ISSUE-010",
+        "P5-ISSUE-011"
+      ],
+      "oracle": {
+        "states": [
+          "EXECUTION_UNKNOWN"
+        ],
+        "calls": 1,
+        "target_value": 1,
+        "gate_sufficient": true,
+        "risk": "LOW",
+        "diagnostics": [],
+        "receipt": "UNKNOWN",
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-G03",
+      "scenario": "two_waits",
+      "entrypoint": "graph",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [
+        "P6-ISSUE-010",
+        "P5-ISSUE-011"
+      ],
+      "oracle": {
+        "states": [
+          "RECEIPTED"
+        ],
+        "calls": 1,
+        "target_value": 1,
+        "gate_sufficient": true,
+        "risk": "LOW",
+        "diagnostics": [],
+        "receipt": "SUCCEEDED",
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    },
+    {
+      "case_id": "RG-G04",
+      "scenario": "chat_isolation",
+      "entrypoint": "graph",
+      "initial_status": "RECEIVED",
+      "initial_value": 0,
+      "clock_start": "2026-01-01T00:00:00Z",
+      "synthetic": true,
+      "required_metrics": [
+        "evidence_completeness",
+        "citation_validity",
+        "risk_calibration",
+        "approval_compliance",
+        "tool_safety",
+        "recovery_correctness",
+        "idempotency",
+        "receipt_correctness"
+      ],
+      "regression_tags": [
+        "P6-ISSUE-010",
+        "P5-ISSUE-011"
+      ],
+      "oracle": {
+        "states": [
+          "APPROVED"
+        ],
+        "calls": 0,
+        "target_value": 0,
+        "gate_sufficient": true,
+        "risk": "LOW",
+        "diagnostics": [],
+        "receipt": null,
+        "evidence": "domain-contract.v1"
+      },
+      "input_risk": "LOW"
+    }
+  ],
+  "dataset_hash": "d03ebaad77a410ecb0010f0e89909f806e3135da0d43850ea1083fcd37869759"
+}

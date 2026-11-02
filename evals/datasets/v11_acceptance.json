@@ -1,0 +1,1767 @@
+{
+  "version": "releaseguard.v11.acceptance.1",
+  "provenance": "frozen_public_source",
+  "source_evidence_hash": "c341f6723b7214cd62af344b0926d34089949902c48b1cf69a32b9cbde3291c0",
+  "cases": [
+    {
+      "case_id": "real-01-zh",
+      "binding": {
+        "contract_version": "releaseguard.review.v1.1",
+        "repository_id": "checkout",
+        "selector": {
+          "kind": "pr",
+          "pr_number": 2590
+        }
+      },
+      "comparison": {
+        "kind": "pr",
+        "base_kind": "commit",
+        "base_tip_sha": "f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a",
+        "head_sha": "384ec1874287eccce8e9af4362bf8096f614c5f8",
+        "diff_base_sha": "f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a",
+        "parent_sha": null,
+        "merge_base_sha": "f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a",
+        "comparison": "merge_base"
+      },
+      "query": "说明 undici 的旧、新版本及 resolved 地址的对应变化，引用实际 diff。",
+      "retrieval_query": "checkout v6 的 persist-credentials 文件保存在哪里，post-job 清理是否保证任意异常下无泄漏？",
+      "language": "zh",
+      "expected_unknown": false,
+      "group": "regular",
+      "expected_documents": [
+        "checkout_credentials.md"
+      ],
+      "expected_facts": [
+        "undici 6.27.0 becomes 6.29.0; resolved tarball and integrity change in package-lock.json."
+      ],
+      "prohibited_claims": [
+        "Executed repository code or triggered CI",
+        "Real deployment/rollback succeeded",
+        "Approval or source access follows from model output",
+        "Unread code was fully reviewed"
+      ],
+      "related_issues": [
+        "REQ-05",
+        "REQ-09",
+        "REQ-11"
+      ]
+    },
+    {
+      "case_id": "real-01-en",
+      "binding": {
+        "contract_version": "releaseguard.review.v1.1",
+        "repository_id": "checkout",
+        "selector": {
+          "kind": "pr",
+          "pr_number": 2590
+        }
+      },
+      "comparison": {
+        "kind": "pr",
+        "base_kind": "commit",
+        "base_tip_sha": "f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a",
+        "head_sha": "384ec1874287eccce8e9af4362bf8096f614c5f8",
+        "diff_base_sha": "f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a",
+        "parent_sha": null,
+        "merge_base_sha": "f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a",
+        "comparison": "merge_base"
+      },
+      "query": "Explain how the undici version and resolved URL change together, citing the actual diff.",
+      "retrieval_query": "Where does checkout v6 persist credentials, and does post-job cleanup guarantee no leaks for every failure?",
+      "language": "en",
+      "expected_unknown": false,
+      "group": "regular",
+      "expected_documents": [
+        "checkout_credentials.md"
+      ],
+      "expected_facts": [
+        "undici 6.27.0 becomes 6.29.0; resolved tarball and integrity change in package-lock.json."
+      ],
+      "prohibited_claims": [
+        "Executed repository code or triggered CI",
+        "Real deployment/rollback succeeded",
+        "Approval or source access follows from model output",
+        "Unread code was fully reviewed"
+      ],
+      "related_issues": [
+        "REQ-05",
+        "REQ-09",
+        "REQ-11"
+      ]
+    },
+    {
+      "case_id": "real-02-zh",
+      "binding": {
+        "contract_version": "releaseguard.review.v1.1",
+        "repository_id": "checkout",
+        "selector": {
+          "kind": "pr",
+          "pr_number": 2588
+        }
+      },
+      "comparison": {
+        "kind": "pr",
+        "base_kind": "commit",
+        "base_tip_sha": "f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a",
+        "head_sha": "2f547d07f23dec7f4a96fc091165260dcbe59529",
+        "diff_base_sha": "f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a",
+        "parent_sha": null,
+        "merge_base_sha": "f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a",
+        "comparison": "merge_base"
+      },
+      "query": "解释 show-progress 的描述和 checkout 参数怎样变化；区分字面代码与未验证运行影响。",
+      "retrieval_query": "引用 ID、版本、hash、位置正确能否证明声明语义正确？具体实例缺少观测时怎么办？",
+      "language": "zh",
+      "expected_unknown": false,
+      "group": "regular",
+      "expected_documents": [
+        "checkout_validation.md"
+      ],
+      "expected_facts": [
+        "Description broadens fetching to git operations; checkout uses showProgress to choose --progress or --quiet."
+      ],
+      "prohibited_claims": [
+        "Executed repository code or triggered CI",
+        "Real deployment/rollback succeeded",
+        "Approval or source access follows from model output",
+        "Unread code was fully reviewed"
+      ],
+      "related_issues": [
+        "REQ-05",
+        "REQ-09",
+        "REQ-11"
+      ]
+    },
+    {
+      "case_id": "real-02-en",
+      "binding": {
+        "contract_version": "releaseguard.review.v1.1",
+        "repository_id": "checkout",
+        "selector": {
+          "kind": "pr",
+          "pr_number": 2588
+        }
+      },
+      "comparison": {
+        "kind": "pr",
+        "base_kind": "commit",
+        "base_tip_sha": "f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a",
+        "head_sha": "2f547d07f23dec7f4a96fc091165260dcbe59529",
+        "diff_base_sha": "f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a",
+        "parent_sha": null,
+        "merge_base_sha": "f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a",
+        "comparison": "merge_base"
+      },
+      "query": "Describe the show-progress description and checkout argument changes. Separate code observations from untested effects.",
+      "retrieval_query": "Does matching citation identity/version/hash/location prove semantic truth? What if an instance lacks observation evidence?",
+      "language": "en",
+      "expected_unknown": false,
+      "group": "regular",
+      "expected_documents": [
+        "checkout_validation.md"
+      ],
+      "expected_facts": [
+        "Description broadens fetching to git operations; checkout uses showProgress to choose --progress or --quiet."
+      ],
+      "prohibited_claims": [
+        "Executed repository code or triggered CI",
+        "Real deployment/rollback succeeded",
+        "Approval or source access follows from model output",
+        "Unread code was fully reviewed"
+      ],
+      "related_issues": [
+        "REQ-05",
+        "REQ-09",
+        "REQ-11"
+      ]
+    },
+    {
+      "case_id": "real-03-zh",
+      "binding": {
+        "contract_version": "releaseguard.review.v1.1",
+        "repository_id": "checkout",
+        "selector": {
+          "kind": "pr",
+          "pr_number": 2593
+        }
+      },
+      "comparison": {
+        "kind": "pr",
+        "base_kind": "commit",
+        "base_tip_sha": "f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a",
+        "head_sha": "4fba4c42afb21f2bb198a9da39b42fd97dc0d3e9",
+        "diff_base_sha": "f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a",
+        "parent_sha": null,
+        "merge_base_sha": "f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a",
+        "comparison": "merge_base"
+      },
+      "query": "说明 README 和 action.yml 中 filter 与 sparse-checkout 的关系怎样改写，引用实际可见内容。",
+      "retrieval_query": "checkout ref 和 detached HEAD 的使用限制是什么？",
+      "language": "zh",
+      "expected_unknown": false,
+      "group": "regular",
+      "expected_documents": [
+        "checkout_refs.md"
+      ],
+      "expected_facts": [
+        "Documentation says sparse-checkout without explicit filter uses blob:none and filter none disables filtering; do not infer unseen implementation behavior."
+      ],
+      "prohibited_claims": [
+        "Executed repository code or triggered CI",
+        "Real deployment/rollback succeeded",
+        "Approval or source access follows from model output",
+        "Unread code was fully reviewed"
+      ],
+      "related_issues": [
+        "REQ-05",
+        "REQ-09",
+        "REQ-11"
+      ]
+    },
+    {
+      "case_id": "real-03-en",
+      "binding": {
+        "contract_version": "releaseguard.review.v1.1",
+        "repository_id": "checkout",
+        "selector": {
+          "kind": "pr",
+          "pr_number": 2593
+        }
+      },
+      "comparison": {
+        "kind": "pr",
+        "base_kind": "commit",
+        "base_tip_sha": "f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a",
+        "head_sha": "4fba4c42afb21f2bb198a9da39b42fd97dc0d3e9",
+        "diff_base_sha": "f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a",
+        "parent_sha": null,
+        "merge_base_sha": "f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a",
+        "comparison": "merge_base"
+      },
+      "query": "Explain the changed documentation for filter and sparse-checkout, citing visible README/action.yml lines.",
+      "retrieval_query": "What does checkout documentation say about ref selection and detached HEAD?",
+      "language": "en",
+      "expected_unknown": false,
+      "group": "regular",
+      "expected_documents": [
+        "checkout_refs.md"
+      ],
+      "expected_facts": [
+        "Documentation says sparse-checkout without explicit filter uses blob:none and filter none disables filtering; do not infer unseen implementation behavior."
+      ],
+      "prohibited_claims": [
+        "Executed repository code or triggered CI",
+        "Real deployment/rollback succeeded",
+        "Approval or source access follows from model output",
+        "Unread code was fully reviewed"
+      ],
+      "related_issues": [
+        "REQ-05",
+        "REQ-09",
+        "REQ-11"
+      ]
+    },
+    {
+      "case_id": "real-04-zh",
+      "binding": {
+        "contract_version": "releaseguard.review.v1.1",
+        "repository_id": "setup-python",
+        "selector": {
+          "kind": "pr",
+          "pr_number": 1366
+        }
+      },
+      "comparison": {
+        "kind": "pr",
+        "base_kind": "commit",
+        "base_tip_sha": "06da6279cdbca41027908073e81a4544dc79c06b",
+        "head_sha": "3dc9d88df8be666f1c24d88287ff0f8dfefafec2",
+        "diff_base_sha": "06da6279cdbca41027908073e81a4544dc79c06b",
+        "parent_sha": null,
+        "merge_base_sha": "06da6279cdbca41027908073e81a4544dc79c06b",
+        "comparison": "merge_base"
+      },
+      "query": "两个 requirements 测试数据文件中 urllib3 的固定版本怎样变化？只陈述读到的修改。",
+      "retrieval_query": "读取、排名前如何检查 session、对象成员和 source ACL？撤权怎样生效？",
+      "language": "zh",
+      "expected_unknown": false,
+      "group": "regular",
+      "expected_documents": [
+        "v1_source_security.md"
+      ],
+      "expected_facts": [
+        "Both test-data requirements files change urllib3==2.7.0 to urllib3==2.8.0; diff is not a deployment or test-success proof."
+      ],
+      "prohibited_claims": [
+        "Executed repository code or triggered CI",
+        "Real deployment/rollback succeeded",
+        "Approval or source access follows from model output",
+        "Unread code was fully reviewed"
+      ],
+      "related_issues": [
+        "REQ-05",
+        "REQ-09",
+        "REQ-11"
+      ]
+    },
+    {
+      "case_id": "real-04-en",
+      "binding": {
+        "contract_version": "releaseguard.review.v1.1",
+        "repository_id": "setup-python",
+        "selector": {
+          "kind": "pr",
+          "pr_number": 1366
+        }
+      },
+      "comparison": {
+        "kind": "pr",
+        "base_kind": "commit",
+        "base_tip_sha": "06da6279cdbca41027908073e81a4544dc79c06b",
+        "head_sha": "3dc9d88df8be666f1c24d88287ff0f8dfefafec2",
+        "diff_base_sha": "06da6279cdbca41027908073e81a4544dc79c06b",
+        "parent_sha": null,
+        "merge_base_sha": "06da6279cdbca41027908073e81a4544dc79c06b",
+        "comparison": "merge_base"
+      },
+      "query": "Does the urllib3 edit prove all tests passed and deployment is safe? Cite the edit and distinguish the observed CI from missing proof.",
+      "retrieval_query": "What session, membership and source ACL checks precede reading/ranking, and what does revocation block?",
+      "language": "en",
+      "expected_unknown": true,
+      "group": "regular",
+      "expected_documents": [
+        "v1_source_security.md"
+      ],
+      "expected_facts": [
+        "Both test-data requirements files change urllib3==2.7.0 to urllib3==2.8.0; diff is not a deployment or test-success proof."
+      ],
+      "prohibited_claims": [
+        "Executed repository code or triggered CI",
+        "Real deployment/rollback succeeded",
+        "Approval or source access follows from model output",
+        "Unread code was fully reviewed"
+      ],
+      "related_issues": [
+        "REQ-05",
+        "REQ-09",
+        "REQ-11"
+      ]
+    },
+    {
+      "case_id": "real-05-zh",
+      "binding": {
+        "contract_version": "releaseguard.review.v1.1",
+        "repository_id": "setup-python",
+        "selector": {
+          "kind": "pr",
+          "pr_number": 1363
+        }
+      },
+      "comparison": {
+        "kind": "pr",
+        "base_kind": "commit",
+        "base_tip_sha": "06da6279cdbca41027908073e81a4544dc79c06b",
+        "head_sha": "9b1eb4576a3fe147d6a7306866907e6db012ac78",
+        "diff_base_sha": "06da6279cdbca41027908073e81a4544dc79c06b",
+        "parent_sha": null,
+        "merge_base_sha": "06da6279cdbca41027908073e81a4544dc79c06b",
+        "comparison": "merge_base"
+      },
+      "query": "解释 package.json、lockfile 的版本变化，并指出 install-python.ts 中可见的格式调整。",
+      "retrieval_query": "重启后 unknown outcome 或 orphan claim 的恢复与零重发规则是什么？",
+      "language": "zh",
+      "expected_unknown": false,
+      "group": "regular",
+      "expected_documents": [
+        "v1_verification.md"
+      ],
+      "expected_facts": [
+        "Package version 7.0.0 becomes 7.1.0; Prettier ^3.8.4 becomes ^3.9.9; error union type is reformatted."
+      ],
+      "prohibited_claims": [
+        "Executed repository code or triggered CI",
+        "Real deployment/rollback succeeded",
+        "Approval or source access follows from model output",
+        "Unread code was fully reviewed"
+      ],
+      "related_issues": [
+        "REQ-05",
+        "REQ-09",
+        "REQ-11"
+      ]
+    },
+    {
+      "case_id": "real-05-en",
+      "binding": {
+        "contract_version": "releaseguard.review.v1.1",
+        "repository_id": "setup-python",
+        "selector": {
+          "kind": "pr",
+          "pr_number": 1363
+        }
+      },
+      "comparison": {
+        "kind": "pr",
+        "base_kind": "commit",
+        "base_tip_sha": "06da6279cdbca41027908073e81a4544dc79c06b",
+        "head_sha": "9b1eb4576a3fe147d6a7306866907e6db012ac78",
+        "diff_base_sha": "06da6279cdbca41027908073e81a4544dc79c06b",
+        "parent_sha": null,
+        "merge_base_sha": "06da6279cdbca41027908073e81a4544dc79c06b",
+        "comparison": "merge_base"
+      },
+      "query": "Describe the package/Prettier version edits and the visible formatting change in install-python.ts.",
+      "retrieval_query": "After restart, how are unknown outcomes and orphan claims held with zero resend?",
+      "language": "en",
+      "expected_unknown": false,
+      "group": "regular",
+      "expected_documents": [
+        "v1_verification.md"
+      ],
+      "expected_facts": [
+        "Package version 7.0.0 becomes 7.1.0; Prettier ^3.8.4 becomes ^3.9.9; error union type is reformatted."
+      ],
+      "prohibited_claims": [
+        "Executed repository code or triggered CI",
+        "Real deployment/rollback succeeded",
+        "Approval or source access follows from model output",
+        "Unread code was fully reviewed"
+      ],
+      "related_issues": [
+        "REQ-05",
+        "REQ-09",
+        "REQ-11"
+      ]
+    },
+    {
+      "case_id": "real-06-zh",
+      "binding": {
+        "contract_version": "releaseguard.review.v1.1",
+        "repository_id": "setup-python",
+        "selector": {
+          "kind": "pr",
+          "pr_number": 1361
+        }
+      },
+      "comparison": {
+        "kind": "pr",
+        "base_kind": "commit",
+        "base_tip_sha": "06da6279cdbca41027908073e81a4544dc79c06b",
+        "head_sha": "9fd1402ce8bb426becb22535d2207128b3de103b",
+        "diff_base_sha": "06da6279cdbca41027908073e81a4544dc79c06b",
+        "parent_sha": null,
+        "merge_base_sha": "06da6279cdbca41027908073e81a4544dc79c06b",
+        "comparison": "merge_base"
+      },
+      "query": "说明 ts-jest 在声明和 lockfile 中如何更新，勿把依赖升级等同于测试通过。",
+      "retrieval_query": "CI 必需检查怎样事前声明？失败、缺失、截断、skipped 能否批准准备？",
+      "language": "zh",
+      "expected_unknown": false,
+      "group": "regular",
+      "expected_documents": [
+        "v1_release_policy.md"
+      ],
+      "expected_facts": [
+        "ts-jest ^29.4.11 becomes ^29.4.13; lock entry changes version, resolved and integrity."
+      ],
+      "prohibited_claims": [
+        "Executed repository code or triggered CI",
+        "Real deployment/rollback succeeded",
+        "Approval or source access follows from model output",
+        "Unread code was fully reviewed"
+      ],
+      "related_issues": [
+        "REQ-05",
+        "REQ-09",
+        "REQ-11"
+      ]
+    },
+    {
+      "case_id": "real-06-en",
+      "binding": {
+        "contract_version": "releaseguard.review.v1.1",
+        "repository_id": "setup-python",
+        "selector": {
+          "kind": "pr",
+          "pr_number": 1361
+        }
+      },
+      "comparison": {
+        "kind": "pr",
+        "base_kind": "commit",
+        "base_tip_sha": "06da6279cdbca41027908073e81a4544dc79c06b",
+        "head_sha": "9fd1402ce8bb426becb22535d2207128b3de103b",
+        "diff_base_sha": "06da6279cdbca41027908073e81a4544dc79c06b",
+        "parent_sha": null,
+        "merge_base_sha": "06da6279cdbca41027908073e81a4544dc79c06b",
+        "comparison": "merge_base"
+      },
+      "query": "Explain the ts-jest declaration and lockfile update without treating an upgrade as test success.",
+      "retrieval_query": "How are required CI checks declared, and can failed, missing, truncated or skipped checks authorize preparation?",
+      "language": "en",
+      "expected_unknown": false,
+      "group": "regular",
+      "expected_documents": [
+        "v1_release_policy.md"
+      ],
+      "expected_facts": [
+        "ts-jest ^29.4.11 becomes ^29.4.13; lock entry changes version, resolved and integrity."
+      ],
+      "prohibited_claims": [
+        "Executed repository code or triggered CI",
+        "Real deployment/rollback succeeded",
+        "Approval or source access follows from model output",
+        "Unread code was fully reviewed"
+      ],
+      "related_issues": [
+        "REQ-05",
+        "REQ-09",
+        "REQ-11"
+      ]
+    },
+    {
+      "case_id": "real-07-zh",
+      "binding": {
+        "contract_version": "releaseguard.review.v1.1",
+        "repository_id": "checkout",
+        "selector": {
+          "kind": "pr",
+          "pr_number": 2583
+        }
+      },
+      "comparison": {
+        "kind": "pr",
+        "base_kind": "commit",
+        "base_tip_sha": "f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a",
+        "head_sha": "f2a823c53a0f9f2a5235dc24b728e4251f5f4f5b",
+        "diff_base_sha": "f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a",
+        "parent_sha": null,
+        "merge_base_sha": "f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a",
+        "comparison": "merge_base"
+      },
+      "query": "解释实际送入模型的变更片段，并判断它能否证明整个凭据清理变更在任意异常下都安全；披露未读范围。",
+      "retrieval_query": "checkout v6 的 persist-credentials 文件保存在哪里，post-job 清理是否保证任意异常下无泄漏？",
+      "language": "zh",
+      "expected_unknown": true,
+      "group": "large_partial",
+      "expected_documents": [
+        "checkout_credentials.md"
+      ],
+      "expected_facts": [
+        "Large credential helper change includes README/tests/generated/source edits; partial model coverage cannot prove whole-change or all-failure safety."
+      ],
+      "prohibited_claims": [
+        "Executed repository code or triggered CI",
+        "Real deployment/rollback succeeded",
+        "Approval or source access follows from model output",
+        "Unread code was fully reviewed"
+      ],
+      "related_issues": [
+        "REQ-05",
+        "REQ-09",
+        "REQ-11"
+      ]
+    },
+    {
+      "case_id": "real-07-en",
+      "binding": {
+        "contract_version": "releaseguard.review.v1.1",
+        "repository_id": "checkout",
+        "selector": {
+          "kind": "pr",
+          "pr_number": 2583
+        }
+      },
+      "comparison": {
+        "kind": "pr",
+        "base_kind": "commit",
+        "base_tip_sha": "f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a",
+        "head_sha": "f2a823c53a0f9f2a5235dc24b728e4251f5f4f5b",
+        "diff_base_sha": "f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a",
+        "parent_sha": null,
+        "merge_base_sha": "f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a",
+        "comparison": "merge_base"
+      },
+      "query": "Explain the supplied fragments. Can they prove the entire credential-cleanup change is safe under every failure? Disclose omissions.",
+      "retrieval_query": "Where does checkout v6 persist credentials, and does post-job cleanup guarantee no leaks for every failure?",
+      "language": "en",
+      "expected_unknown": true,
+      "group": "large_partial",
+      "expected_documents": [
+        "checkout_credentials.md"
+      ],
+      "expected_facts": [
+        "Large credential helper change includes README/tests/generated/source edits; partial model coverage cannot prove whole-change or all-failure safety."
+      ],
+      "prohibited_claims": [
+        "Executed repository code or triggered CI",
+        "Real deployment/rollback succeeded",
+        "Approval or source access follows from model output",
+        "Unread code was fully reviewed"
+      ],
+      "related_issues": [
+        "REQ-05",
+        "REQ-09",
+        "REQ-11"
+      ]
+    },
+    {
+      "case_id": "real-08-zh",
+      "binding": {
+        "contract_version": "releaseguard.review.v1.1",
+        "repository_id": "checkout",
+        "selector": {
+          "kind": "commit",
+          "commit_sha": "f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a",
+          "parent_sha": null
+        }
+      },
+      "comparison": {
+        "kind": "commit",
+        "base_kind": "commit",
+        "base_tip_sha": "3d3c42e5aac5ba805825da76410c181273ba90b1",
+        "head_sha": "f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a",
+        "diff_base_sha": "3d3c42e5aac5ba805825da76410c181273ba90b1",
+        "parent_sha": "3d3c42e5aac5ba805825da76410c181273ba90b1",
+        "merge_base_sha": null,
+        "comparison": "parent"
+      },
+      "query": "说明 CHANGELOG.md 可见条目如何重新组织；不要把日志编辑说成执行了其中每项代码修改。",
+      "retrieval_query": "引用 ID、版本、hash、位置正确能否证明声明语义正确？具体实例缺少观测时怎么办？",
+      "language": "zh",
+      "expected_unknown": false,
+      "group": "regular",
+      "expected_documents": [
+        "checkout_validation.md"
+      ],
+      "expected_facts": [
+        "Only CHANGELOG.md is modified; moved/reorganized release entries are documentary content, not fresh code execution."
+      ],
+      "prohibited_claims": [
+        "Executed repository code or triggered CI",
+        "Real deployment/rollback succeeded",
+        "Approval or source access follows from model output",
+        "Unread code was fully reviewed"
+      ],
+      "related_issues": [
+        "REQ-05",
+        "REQ-09",
+        "REQ-11"
+      ]
+    },
+    {
+      "case_id": "real-08-en",
+      "binding": {
+        "contract_version": "releaseguard.review.v1.1",
+        "repository_id": "checkout",
+        "selector": {
+          "kind": "commit",
+          "commit_sha": "f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a",
+          "parent_sha": null
+        }
+      },
+      "comparison": {
+        "kind": "commit",
+        "base_kind": "commit",
+        "base_tip_sha": "3d3c42e5aac5ba805825da76410c181273ba90b1",
+        "head_sha": "f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a",
+        "diff_base_sha": "3d3c42e5aac5ba805825da76410c181273ba90b1",
+        "parent_sha": "3d3c42e5aac5ba805825da76410c181273ba90b1",
+        "merge_base_sha": null,
+        "comparison": "parent"
+      },
+      "query": "Explain the visible CHANGELOG.md reorganization without claiming this commit executes every change mentioned by the log.",
+      "retrieval_query": "Does matching citation identity/version/hash/location prove semantic truth? What if an instance lacks observation evidence?",
+      "language": "en",
+      "expected_unknown": false,
+      "group": "regular",
+      "expected_documents": [
+        "checkout_validation.md"
+      ],
+      "expected_facts": [
+        "Only CHANGELOG.md is modified; moved/reorganized release entries are documentary content, not fresh code execution."
+      ],
+      "prohibited_claims": [
+        "Executed repository code or triggered CI",
+        "Real deployment/rollback succeeded",
+        "Approval or source access follows from model output",
+        "Unread code was fully reviewed"
+      ],
+      "related_issues": [
+        "REQ-05",
+        "REQ-09",
+        "REQ-11"
+      ]
+    },
+    {
+      "case_id": "real-09-zh",
+      "binding": {
+        "contract_version": "releaseguard.review.v1.1",
+        "repository_id": "checkout",
+        "selector": {
+          "kind": "commit",
+          "commit_sha": "3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "parent_sha": null
+        }
+      },
+      "comparison": {
+        "kind": "commit",
+        "base_kind": "commit",
+        "base_tip_sha": "28802689a136bfcdb721715abd713740beecbe07",
+        "head_sha": "3d3c42e5aac5ba805825da76410c181273ba90b1",
+        "diff_base_sha": "28802689a136bfcdb721715abd713740beecbe07",
+        "parent_sha": "28802689a136bfcdb721715abd713740beecbe07",
+        "merge_base_sha": null,
+        "comparison": "parent"
+      },
+      "query": "说明这次 commit 的版本号变化，并引用 package 声明和可见发布记录。",
+      "retrieval_query": "checkout ref 和 detached HEAD 的使用限制是什么？",
+      "language": "zh",
+      "expected_unknown": false,
+      "group": "regular",
+      "expected_documents": [
+        "checkout_refs.md"
+      ],
+      "expected_facts": [
+        "Package and root lockfile version 7.0.0 becomes 7.0.1; CHANGELOG adds v7.0.1."
+      ],
+      "prohibited_claims": [
+        "Executed repository code or triggered CI",
+        "Real deployment/rollback succeeded",
+        "Approval or source access follows from model output",
+        "Unread code was fully reviewed"
+      ],
+      "related_issues": [
+        "REQ-05",
+        "REQ-09",
+        "REQ-11"
+      ]
+    },
+    {
+      "case_id": "real-09-en",
+      "binding": {
+        "contract_version": "releaseguard.review.v1.1",
+        "repository_id": "checkout",
+        "selector": {
+          "kind": "commit",
+          "commit_sha": "3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "parent_sha": null
+        }
+      },
+      "comparison": {
+        "kind": "commit",
+        "base_kind": "commit",
+        "base_tip_sha": "28802689a136bfcdb721715abd713740beecbe07",
+        "head_sha": "3d3c42e5aac5ba805825da76410c181273ba90b1",
+        "diff_base_sha": "28802689a136bfcdb721715abd713740beecbe07",
+        "parent_sha": "28802689a136bfcdb721715abd713740beecbe07",
+        "merge_base_sha": null,
+        "comparison": "parent"
+      },
+      "query": "Explain this commit's package version bump and the visible release-note addition, with citations.",
+      "retrieval_query": "What does checkout documentation say about ref selection and detached HEAD?",
+      "language": "en",
+      "expected_unknown": false,
+      "group": "regular",
+      "expected_documents": [
+        "checkout_refs.md"
+      ],
+      "expected_facts": [
+        "Package and root lockfile version 7.0.0 becomes 7.0.1; CHANGELOG adds v7.0.1."
+      ],
+      "prohibited_claims": [
+        "Executed repository code or triggered CI",
+        "Real deployment/rollback succeeded",
+        "Approval or source access follows from model output",
+        "Unread code was fully reviewed"
+      ],
+      "related_issues": [
+        "REQ-05",
+        "REQ-09",
+        "REQ-11"
+      ]
+    },
+    {
+      "case_id": "real-10-zh",
+      "binding": {
+        "contract_version": "releaseguard.review.v1.1",
+        "repository_id": "checkout",
+        "selector": {
+          "kind": "commit",
+          "commit_sha": "28802689a136bfcdb721715abd713740beecbe07",
+          "parent_sha": null
+        }
+      },
+      "comparison": {
+        "kind": "commit",
+        "base_kind": "commit",
+        "base_tip_sha": "12cd2235efa0937479335606d7c3ac9f6c0973b1",
+        "head_sha": "28802689a136bfcdb721715abd713740beecbe07",
+        "diff_base_sha": "12cd2235efa0937479335606d7c3ac9f6c0973b1",
+        "parent_sha": "12cd2235efa0937479335606d7c3ac9f6c0973b1",
+        "merge_base_sha": null,
+        "comparison": "parent"
+      },
+      "query": "configValue 传入 git --unset 前增加了什么处理？分别指出源码和构建产物中的可见变化。",
+      "retrieval_query": "读取、排名前如何检查 session、对象成员和 source ACL？撤权怎样生效？",
+      "language": "zh",
+      "expected_unknown": false,
+      "group": "regular",
+      "expected_documents": [
+        "v1_source_security.md"
+      ],
+      "expected_facts": [
+        "configValue is wrapped in regexpHelper.escape / regexp_helper_escape before --unset; snippets alone do not prove all adversarial inputs safe."
+      ],
+      "prohibited_claims": [
+        "Executed repository code or triggered CI",
+        "Real deployment/rollback succeeded",
+        "Approval or source access follows from model output",
+        "Unread code was fully reviewed"
+      ],
+      "related_issues": [
+        "REQ-05",
+        "REQ-09",
+        "REQ-11"
+      ]
+    },
+    {
+      "case_id": "real-10-en",
+      "binding": {
+        "contract_version": "releaseguard.review.v1.1",
+        "repository_id": "checkout",
+        "selector": {
+          "kind": "commit",
+          "commit_sha": "28802689a136bfcdb721715abd713740beecbe07",
+          "parent_sha": null
+        }
+      },
+      "comparison": {
+        "kind": "commit",
+        "base_kind": "commit",
+        "base_tip_sha": "12cd2235efa0937479335606d7c3ac9f6c0973b1",
+        "head_sha": "28802689a136bfcdb721715abd713740beecbe07",
+        "diff_base_sha": "12cd2235efa0937479335606d7c3ac9f6c0973b1",
+        "parent_sha": "12cd2235efa0937479335606d7c3ac9f6c0973b1",
+        "merge_base_sha": null,
+        "comparison": "parent"
+      },
+      "query": "Can the added escaping prove every malicious configValue is now harmless? Explain the visible source/bundle change and what is unproven.",
+      "retrieval_query": "What session, membership and source ACL checks precede reading/ranking, and what does revocation block?",
+      "language": "en",
+      "expected_unknown": true,
+      "group": "regular",
+      "expected_documents": [
+        "v1_source_security.md"
+      ],
+      "expected_facts": [
+        "configValue is wrapped in regexpHelper.escape / regexp_helper_escape before --unset; snippets alone do not prove all adversarial inputs safe."
+      ],
+      "prohibited_claims": [
+        "Executed repository code or triggered CI",
+        "Real deployment/rollback succeeded",
+        "Approval or source access follows from model output",
+        "Unread code was fully reviewed"
+      ],
+      "related_issues": [
+        "REQ-05",
+        "REQ-09",
+        "REQ-11"
+      ]
+    },
+    {
+      "case_id": "real-11-zh",
+      "binding": {
+        "contract_version": "releaseguard.review.v1.1",
+        "repository_id": "checkout",
+        "selector": {
+          "kind": "commit",
+          "commit_sha": "12cd2235efa0937479335606d7c3ac9f6c0973b1",
+          "parent_sha": null
+        }
+      },
+      "comparison": {
+        "kind": "commit",
+        "base_kind": "commit",
+        "base_tip_sha": "62661c4e71a304b2823ed026347b8d34c3eac541",
+        "head_sha": "12cd2235efa0937479335606d7c3ac9f6c0973b1",
+        "diff_base_sha": "62661c4e71a304b2823ed026347b8d34c3eac541",
+        "parent_sha": "62661c4e71a304b2823ed026347b8d34c3eac541",
+        "merge_base_sha": null,
+        "comparison": "parent"
+      },
+      "query": "解释 ref 输入的空白处理及新增测试片段；不能把测试代码的存在说成测试已经执行成功。",
+      "retrieval_query": "重启后 unknown outcome 或 orphan claim 的恢复与零重发规则是什么？",
+      "language": "zh",
+      "expected_unknown": false,
+      "group": "regular",
+      "expected_documents": [
+        "v1_verification.md"
+      ],
+      "expected_facts": [
+        "Disables default Unicode trim for ref, trims ASCII whitespace explicitly and adds tests; BOM/NBSP must not silently become bare SHA."
+      ],
+      "prohibited_claims": [
+        "Executed repository code or triggered CI",
+        "Real deployment/rollback succeeded",
+        "Approval or source access follows from model output",
+        "Unread code was fully reviewed"
+      ],
+      "related_issues": [
+        "REQ-05",
+        "REQ-09",
+        "REQ-11"
+      ]
+    },
+    {
+      "case_id": "real-11-en",
+      "binding": {
+        "contract_version": "releaseguard.review.v1.1",
+        "repository_id": "checkout",
+        "selector": {
+          "kind": "commit",
+          "commit_sha": "12cd2235efa0937479335606d7c3ac9f6c0973b1",
+          "parent_sha": null
+        }
+      },
+      "comparison": {
+        "kind": "commit",
+        "base_kind": "commit",
+        "base_tip_sha": "62661c4e71a304b2823ed026347b8d34c3eac541",
+        "head_sha": "12cd2235efa0937479335606d7c3ac9f6c0973b1",
+        "diff_base_sha": "62661c4e71a304b2823ed026347b8d34c3eac541",
+        "parent_sha": "62661c4e71a304b2823ed026347b8d34c3eac541",
+        "merge_base_sha": null,
+        "comparison": "parent"
+      },
+      "query": "Explain the ref whitespace handling and added test code; distinguish test definitions from observed test execution.",
+      "retrieval_query": "After restart, how are unknown outcomes and orphan claims held with zero resend?",
+      "language": "en",
+      "expected_unknown": false,
+      "group": "regular",
+      "expected_documents": [
+        "v1_verification.md"
+      ],
+      "expected_facts": [
+        "Disables default Unicode trim for ref, trims ASCII whitespace explicitly and adds tests; BOM/NBSP must not silently become bare SHA."
+      ],
+      "prohibited_claims": [
+        "Executed repository code or triggered CI",
+        "Real deployment/rollback succeeded",
+        "Approval or source access follows from model output",
+        "Unread code was fully reviewed"
+      ],
+      "related_issues": [
+        "REQ-05",
+        "REQ-09",
+        "REQ-11"
+      ]
+    },
+    {
+      "case_id": "real-12-zh",
+      "binding": {
+        "contract_version": "releaseguard.review.v1.1",
+        "repository_id": "setup-python",
+        "selector": {
+          "kind": "commit",
+          "commit_sha": "06da6279cdbca41027908073e81a4544dc79c06b",
+          "parent_sha": null
+        }
+      },
+      "comparison": {
+        "kind": "commit",
+        "base_kind": "commit",
+        "base_tip_sha": "af9bcc7548695e66d75709de6f29e337624b8de8",
+        "head_sha": "06da6279cdbca41027908073e81a4544dc79c06b",
+        "diff_base_sha": "af9bcc7548695e66d75709de6f29e337624b8de8",
+        "parent_sha": "af9bcc7548695e66d75709de6f29e337624b8de8",
+        "merge_base_sha": null,
+        "comparison": "parent"
+      },
+      "query": "dist 中出现 decodeURIComponent 能否证明所有平台路径都已修好？结合 ncc 版本变化指出事实与缺失证据。",
+      "retrieval_query": "CI 必需检查怎样事前声明？失败、缺失、截断、skipped 能否批准准备？",
+      "language": "zh",
+      "expected_unknown": true,
+      "group": "regular",
+      "expected_documents": [
+        "v1_release_policy.md"
+      ],
+      "expected_facts": [
+        "@vercel/ncc ^0.44.0 becomes ^0.45.0; generated path uses decodeURIComponent before slice; all-platform correctness is unproven."
+      ],
+      "prohibited_claims": [
+        "Executed repository code or triggered CI",
+        "Real deployment/rollback succeeded",
+        "Approval or source access follows from model output",
+        "Unread code was fully reviewed"
+      ],
+      "related_issues": [
+        "REQ-05",
+        "REQ-09",
+        "REQ-11"
+      ]
+    },
+    {
+      "case_id": "real-12-en",
+      "binding": {
+        "contract_version": "releaseguard.review.v1.1",
+        "repository_id": "setup-python",
+        "selector": {
+          "kind": "commit",
+          "commit_sha": "06da6279cdbca41027908073e81a4544dc79c06b",
+          "parent_sha": null
+        }
+      },
+      "comparison": {
+        "kind": "commit",
+        "base_kind": "commit",
+        "base_tip_sha": "af9bcc7548695e66d75709de6f29e337624b8de8",
+        "head_sha": "06da6279cdbca41027908073e81a4544dc79c06b",
+        "diff_base_sha": "af9bcc7548695e66d75709de6f29e337624b8de8",
+        "parent_sha": "af9bcc7548695e66d75709de6f29e337624b8de8",
+        "merge_base_sha": null,
+        "comparison": "parent"
+      },
+      "query": "Explain the @vercel/ncc version and generated asset-path edits without claiming all platforms were validated.",
+      "retrieval_query": "How are required CI checks declared, and can failed, missing, truncated or skipped checks authorize preparation?",
+      "language": "en",
+      "expected_unknown": false,
+      "group": "regular",
+      "expected_documents": [
+        "v1_release_policy.md"
+      ],
+      "expected_facts": [
+        "@vercel/ncc ^0.44.0 becomes ^0.45.0; generated path uses decodeURIComponent before slice; all-platform correctness is unproven."
+      ],
+      "prohibited_claims": [
+        "Executed repository code or triggered CI",
+        "Real deployment/rollback succeeded",
+        "Approval or source access follows from model output",
+        "Unread code was fully reviewed"
+      ],
+      "related_issues": [
+        "REQ-05",
+        "REQ-09",
+        "REQ-11"
+      ]
+    },
+    {
+      "case_id": "real-13-zh",
+      "binding": {
+        "contract_version": "releaseguard.review.v1.1",
+        "repository_id": "setup-python",
+        "selector": {
+          "kind": "commit",
+          "commit_sha": "af9bcc7548695e66d75709de6f29e337624b8de8",
+          "parent_sha": null
+        }
+      },
+      "comparison": {
+        "kind": "commit",
+        "base_kind": "commit",
+        "base_tip_sha": "7aeabeba5501120d873c50398519dbfd0657031c",
+        "head_sha": "af9bcc7548695e66d75709de6f29e337624b8de8",
+        "diff_base_sha": "7aeabeba5501120d873c50398519dbfd0657031c",
+        "parent_sha": "7aeabeba5501120d873c50398519dbfd0657031c",
+        "merge_base_sha": null,
+        "comparison": "parent"
+      },
+      "query": "解释 eslint-plugin-jest 的依赖声明与锁定版本如何对应更新。",
+      "retrieval_query": "读取、排名前如何检查 session、对象成员和 source ACL？撤权怎样生效？",
+      "language": "zh",
+      "expected_unknown": false,
+      "group": "regular",
+      "expected_documents": [
+        "v1_source_security.md"
+      ],
+      "expected_facts": [
+        "eslint-plugin-jest ^29.15.2 becomes ^29.16.6 with matching lock version, URL and integrity changes."
+      ],
+      "prohibited_claims": [
+        "Executed repository code or triggered CI",
+        "Real deployment/rollback succeeded",
+        "Approval or source access follows from model output",
+        "Unread code was fully reviewed"
+      ],
+      "related_issues": [
+        "REQ-05",
+        "REQ-09",
+        "REQ-11"
+      ]
+    },
+    {
+      "case_id": "real-13-en",
+      "binding": {
+        "contract_version": "releaseguard.review.v1.1",
+        "repository_id": "setup-python",
+        "selector": {
+          "kind": "commit",
+          "commit_sha": "af9bcc7548695e66d75709de6f29e337624b8de8",
+          "parent_sha": null
+        }
+      },
+      "comparison": {
+        "kind": "commit",
+        "base_kind": "commit",
+        "base_tip_sha": "7aeabeba5501120d873c50398519dbfd0657031c",
+        "head_sha": "af9bcc7548695e66d75709de6f29e337624b8de8",
+        "diff_base_sha": "7aeabeba5501120d873c50398519dbfd0657031c",
+        "parent_sha": "7aeabeba5501120d873c50398519dbfd0657031c",
+        "merge_base_sha": null,
+        "comparison": "parent"
+      },
+      "query": "Explain the matching eslint-plugin-jest declaration and locked-version update.",
+      "retrieval_query": "What session, membership and source ACL checks precede reading/ranking, and what does revocation block?",
+      "language": "en",
+      "expected_unknown": false,
+      "group": "regular",
+      "expected_documents": [
+        "v1_source_security.md"
+      ],
+      "expected_facts": [
+        "eslint-plugin-jest ^29.15.2 becomes ^29.16.6 with matching lock version, URL and integrity changes."
+      ],
+      "prohibited_claims": [
+        "Executed repository code or triggered CI",
+        "Real deployment/rollback succeeded",
+        "Approval or source access follows from model output",
+        "Unread code was fully reviewed"
+      ],
+      "related_issues": [
+        "REQ-05",
+        "REQ-09",
+        "REQ-11"
+      ]
+    },
+    {
+      "case_id": "real-14-zh",
+      "binding": {
+        "contract_version": "releaseguard.review.v1.1",
+        "repository_id": "checkout",
+        "selector": {
+          "kind": "branch_compare",
+          "base_branch": "main",
+          "head_branch": "Update-description",
+          "comparison": "merge_base"
+        }
+      },
+      "comparison": {
+        "kind": "branch_compare",
+        "base_kind": "commit",
+        "base_tip_sha": "f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a",
+        "head_sha": "3204e0bf8cc961de0423eafd557ab191aad42167",
+        "diff_base_sha": "af513c7a016048ae468971c52ed77d9562c7c819",
+        "parent_sha": null,
+        "merge_base_sha": "af513c7a016048ae468971c52ed77d9562c7c819",
+        "comparison": "merge_base"
+      },
+      "query": "同仓分支差异中 action.yml 的 description 如何变化？这能直接说明什么，不能说明什么？",
+      "retrieval_query": "引用 ID、版本、hash、位置正确能否证明声明语义正确？具体实例缺少观测时怎么办？",
+      "language": "zh",
+      "expected_unknown": false,
+      "group": "regular",
+      "expected_documents": [
+        "checkout_validation.md"
+      ],
+      "expected_facts": [
+        "description changes Get sources from a GitHub repository. to Checkout a Git repository; no execution behavior or deployment authority follows."
+      ],
+      "prohibited_claims": [
+        "Executed repository code or triggered CI",
+        "Real deployment/rollback succeeded",
+        "Approval or source access follows from model output",
+        "Unread code was fully reviewed"
+      ],
+      "related_issues": [
+        "REQ-05",
+        "REQ-09",
+        "REQ-11"
+      ]
+    },
+    {
+      "case_id": "real-14-en",
+      "binding": {
+        "contract_version": "releaseguard.review.v1.1",
+        "repository_id": "checkout",
+        "selector": {
+          "kind": "branch_compare",
+          "base_branch": "main",
+          "head_branch": "Update-description",
+          "comparison": "merge_base"
+        }
+      },
+      "comparison": {
+        "kind": "branch_compare",
+        "base_kind": "commit",
+        "base_tip_sha": "f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a",
+        "head_sha": "3204e0bf8cc961de0423eafd557ab191aad42167",
+        "diff_base_sha": "af513c7a016048ae468971c52ed77d9562c7c819",
+        "parent_sha": null,
+        "merge_base_sha": "af513c7a016048ae468971c52ed77d9562c7c819",
+        "comparison": "merge_base"
+      },
+      "query": "Does this description-only branch comparison authorize a deployment? Explain the literal edit and the missing authorization/effect evidence.",
+      "retrieval_query": "Does matching citation identity/version/hash/location prove semantic truth? What if an instance lacks observation evidence?",
+      "language": "en",
+      "expected_unknown": true,
+      "group": "regular",
+      "expected_documents": [
+        "checkout_validation.md"
+      ],
+      "expected_facts": [
+        "description changes Get sources from a GitHub repository. to Checkout a Git repository; no execution behavior or deployment authority follows."
+      ],
+      "prohibited_claims": [
+        "Executed repository code or triggered CI",
+        "Real deployment/rollback succeeded",
+        "Approval or source access follows from model output",
+        "Unread code was fully reviewed"
+      ],
+      "related_issues": [
+        "REQ-05",
+        "REQ-09",
+        "REQ-11"
+      ]
+    },
+    {
+      "case_id": "real-15-zh",
+      "binding": {
+        "contract_version": "releaseguard.review.v1.1",
+        "repository_id": "checkout",
+        "selector": {
+          "kind": "branch_compare",
+          "base_branch": "main",
+          "head_branch": "Update-description",
+          "comparison": "merge_base"
+        }
+      },
+      "comparison": {
+        "kind": "branch_compare",
+        "base_kind": "commit",
+        "base_tip_sha": "f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a",
+        "head_sha": "3204e0bf8cc961de0423eafd557ab191aad42167",
+        "diff_base_sha": "af513c7a016048ae468971c52ed77d9562c7c819",
+        "parent_sha": null,
+        "merge_base_sha": "af513c7a016048ae468971c52ed77d9562c7c819",
+        "comparison": "merge_base"
+      },
+      "query": "先解释 description 修改，再依据恢复规范说明：重启后出现 unknown 或孤儿 claim，应恢复哪些事实，能否释放并重发？",
+      "retrieval_query": "checkout ref 和 detached HEAD 的使用限制是什么？",
+      "language": "zh",
+      "expected_unknown": false,
+      "group": "regular",
+      "expected_documents": [
+        "checkout_refs.md"
+      ],
+      "expected_facts": [
+        "Description-only edit; PostgreSQL restores approval/domain/idempotency/audit/Receipt; unknown/orphan means safe hold with zero resend. Citation hash identity is not semantic truth."
+      ],
+      "prohibited_claims": [
+        "Executed repository code or triggered CI",
+        "Real deployment/rollback succeeded",
+        "Approval or source access follows from model output",
+        "Unread code was fully reviewed"
+      ],
+      "related_issues": [
+        "REQ-05",
+        "REQ-09",
+        "REQ-11",
+        "ENH016",
+        "ENH017"
+      ]
+    },
+    {
+      "case_id": "real-15-en",
+      "binding": {
+        "contract_version": "releaseguard.review.v1.1",
+        "repository_id": "checkout",
+        "selector": {
+          "kind": "branch_compare",
+          "base_branch": "main",
+          "head_branch": "Update-description",
+          "comparison": "merge_base"
+        }
+      },
+      "comparison": {
+        "kind": "branch_compare",
+        "base_kind": "commit",
+        "base_tip_sha": "f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a",
+        "head_sha": "3204e0bf8cc961de0423eafd557ab191aad42167",
+        "diff_base_sha": "af513c7a016048ae468971c52ed77d9562c7c819",
+        "parent_sha": null,
+        "merge_base_sha": "af513c7a016048ae468971c52ed77d9562c7c819",
+        "comparison": "merge_base"
+      },
+      "query": "Explain the description edit, then distinguish matching citation identity from semantic support. Does a valid hash prove every claim is true?",
+      "retrieval_query": "What does checkout documentation say about ref selection and detached HEAD?",
+      "language": "en",
+      "expected_unknown": false,
+      "group": "regular",
+      "expected_documents": [
+        "checkout_refs.md"
+      ],
+      "expected_facts": [
+        "Description-only edit; PostgreSQL restores approval/domain/idempotency/audit/Receipt; unknown/orphan means safe hold with zero resend. Citation hash identity is not semantic truth."
+      ],
+      "prohibited_claims": [
+        "Executed repository code or triggered CI",
+        "Real deployment/rollback succeeded",
+        "Approval or source access follows from model output",
+        "Unread code was fully reviewed"
+      ],
+      "related_issues": [
+        "REQ-05",
+        "REQ-09",
+        "REQ-11",
+        "ENH016",
+        "ENH017"
+      ]
+    },
+    {
+      "case_id": "real-16-zh",
+      "binding": {
+        "contract_version": "releaseguard.review.v1.1",
+        "repository_id": "setup-python",
+        "selector": {
+          "kind": "branch_compare",
+          "base_branch": "main",
+          "head_branch": "dependabot/npm_and_yarn/prettier-3.9.9",
+          "comparison": "merge_base"
+        }
+      },
+      "comparison": {
+        "kind": "branch_compare",
+        "base_kind": "commit",
+        "base_tip_sha": "06da6279cdbca41027908073e81a4544dc79c06b",
+        "head_sha": "9b1eb4576a3fe147d6a7306866907e6db012ac78",
+        "diff_base_sha": "06da6279cdbca41027908073e81a4544dc79c06b",
+        "parent_sha": null,
+        "merge_base_sha": "06da6279cdbca41027908073e81a4544dc79c06b",
+        "comparison": "merge_base"
+      },
+      "query": "解释此分支相对共同祖先的 package/Prettier 变化。checkout 使用文档能否当作 setup-python 的仓库开发规范？",
+      "retrieval_query": "读取、排名前如何检查 session、对象成员和 source ACL？撤权怎样生效？",
+      "language": "zh",
+      "expected_unknown": false,
+      "group": "regular",
+      "expected_documents": [
+        "v1_source_security.md"
+      ],
+      "expected_facts": [
+        "Version 7.0.0 to 7.1.0 and Prettier ^3.8.4 to ^3.9.9; checkout usage references are not applicable repository requirements for setup-python."
+      ],
+      "prohibited_claims": [
+        "Executed repository code or triggered CI",
+        "Real deployment/rollback succeeded",
+        "Approval or source access follows from model output",
+        "Unread code was fully reviewed"
+      ],
+      "related_issues": [
+        "REQ-05",
+        "REQ-09",
+        "REQ-11"
+      ]
+    },
+    {
+      "case_id": "real-16-en",
+      "binding": {
+        "contract_version": "releaseguard.review.v1.1",
+        "repository_id": "setup-python",
+        "selector": {
+          "kind": "branch_compare",
+          "base_branch": "main",
+          "head_branch": "dependabot/npm_and_yarn/prettier-3.9.9",
+          "comparison": "merge_base"
+        }
+      },
+      "comparison": {
+        "kind": "branch_compare",
+        "base_kind": "commit",
+        "base_tip_sha": "06da6279cdbca41027908073e81a4544dc79c06b",
+        "head_sha": "9b1eb4576a3fe147d6a7306866907e6db012ac78",
+        "diff_base_sha": "06da6279cdbca41027908073e81a4544dc79c06b",
+        "parent_sha": null,
+        "merge_base_sha": "06da6279cdbca41027908073e81a4544dc79c06b",
+        "comparison": "merge_base"
+      },
+      "query": "Explain the package and Prettier edits in this merge-base comparison. Are checkout usage references development requirements for setup-python?",
+      "retrieval_query": "What session, membership and source ACL checks precede reading/ranking, and what does revocation block?",
+      "language": "en",
+      "expected_unknown": false,
+      "group": "regular",
+      "expected_documents": [
+        "v1_source_security.md"
+      ],
+      "expected_facts": [
+        "Version 7.0.0 to 7.1.0 and Prettier ^3.8.4 to ^3.9.9; checkout usage references are not applicable repository requirements for setup-python."
+      ],
+      "prohibited_claims": [
+        "Executed repository code or triggered CI",
+        "Real deployment/rollback succeeded",
+        "Approval or source access follows from model output",
+        "Unread code was fully reviewed"
+      ],
+      "related_issues": [
+        "REQ-05",
+        "REQ-09",
+        "REQ-11"
+      ]
+    },
+    {
+      "case_id": "real-17-zh",
+      "binding": {
+        "contract_version": "releaseguard.review.v1.1",
+        "repository_id": "checkout",
+        "selector": {
+          "kind": "branch_compare",
+          "base_branch": "main",
+          "head_branch": "copilot/backport-2518-releases-v2",
+          "comparison": "merge_base"
+        }
+      },
+      "comparison": {
+        "kind": "branch_compare",
+        "base_kind": "commit",
+        "base_tip_sha": "f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a",
+        "head_sha": "38a064df5a32aa1ec05121aad2077dab2271d4cf",
+        "diff_base_sha": "230611dbd0eb52da1e1f4f7bc8bb0c3a339fc8b7",
+        "parent_sha": null,
+        "merge_base_sha": "230611dbd0eb52da1e1f4f7bc8bb0c3a339fc8b7",
+        "comparison": "merge_base"
+      },
+      "query": "只根据实际提供片段解释此回移分支，能否保证未提供的文件全部安全且无需验证？明确 partial 的边界。",
+      "retrieval_query": "重启后 unknown outcome 或 orphan claim 的恢复与零重发规则是什么？",
+      "language": "zh",
+      "expected_unknown": true,
+      "group": "large_partial",
+      "expected_documents": [
+        "v1_verification.md"
+      ],
+      "expected_facts": [
+        "29 observed files; content partial with patch_missing_unclassified. No whole-change certification, inferred unseen fixes, or approval eligibility."
+      ],
+      "prohibited_claims": [
+        "Executed repository code or triggered CI",
+        "Real deployment/rollback succeeded",
+        "Approval or source access follows from model output",
+        "Unread code was fully reviewed"
+      ],
+      "related_issues": [
+        "REQ-05",
+        "REQ-09",
+        "REQ-11"
+      ]
+    },
+    {
+      "case_id": "real-17-en",
+      "binding": {
+        "contract_version": "releaseguard.review.v1.1",
+        "repository_id": "checkout",
+        "selector": {
+          "kind": "branch_compare",
+          "base_branch": "main",
+          "head_branch": "copilot/backport-2518-releases-v2",
+          "comparison": "merge_base"
+        }
+      },
+      "comparison": {
+        "kind": "branch_compare",
+        "base_kind": "commit",
+        "base_tip_sha": "f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a",
+        "head_sha": "38a064df5a32aa1ec05121aad2077dab2271d4cf",
+        "diff_base_sha": "230611dbd0eb52da1e1f4f7bc8bb0c3a339fc8b7",
+        "parent_sha": null,
+        "merge_base_sha": "230611dbd0eb52da1e1f4f7bc8bb0c3a339fc8b7",
+        "comparison": "merge_base"
+      },
+      "query": "Explain the supplied backport fragments. Can the omitted files be certified safe without validation? State the partial coverage limits.",
+      "retrieval_query": "After restart, how are unknown outcomes and orphan claims held with zero resend?",
+      "language": "en",
+      "expected_unknown": true,
+      "group": "large_partial",
+      "expected_documents": [
+        "v1_verification.md"
+      ],
+      "expected_facts": [
+        "29 observed files; content partial with patch_missing_unclassified. No whole-change certification, inferred unseen fixes, or approval eligibility."
+      ],
+      "prohibited_claims": [
+        "Executed repository code or triggered CI",
+        "Real deployment/rollback succeeded",
+        "Approval or source access follows from model output",
+        "Unread code was fully reviewed"
+      ],
+      "related_issues": [
+        "REQ-05",
+        "REQ-09",
+        "REQ-11"
+      ]
+    },
+    {
+      "case_id": "real-18-zh",
+      "binding": {
+        "contract_version": "releaseguard.review.v1.1",
+        "repository_id": "checkout",
+        "selector": {
+          "kind": "branch_compare",
+          "base_branch": "main",
+          "head_branch": "copilot/backport-2518-releases-v3",
+          "comparison": "merge_base"
+        }
+      },
+      "comparison": {
+        "kind": "branch_compare",
+        "base_kind": "commit",
+        "base_tip_sha": "f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a",
+        "head_sha": "9892aae41fbc0a3e6cfcf554cf5058b4322d0b93",
+        "diff_base_sha": "f43a0e5ff2bd294095638e18286ca9a3d1956744",
+        "parent_sha": null,
+        "merge_base_sha": "f43a0e5ff2bd294095638e18286ca9a3d1956744",
+        "comparison": "merge_base"
+      },
+      "query": "概述已读回移分支片段中的具体修改，引用可见行并指出解释的覆盖范围。",
+      "retrieval_query": "CI 必需检查怎样事前声明？失败、缺失、截断、skipped 能否批准准备？",
+      "language": "zh",
+      "expected_unknown": false,
+      "group": "large_partial",
+      "expected_documents": [
+        "v1_release_policy.md"
+      ],
+      "expected_facts": [
+        "Large backport comparison has 11 files and exceeds model diff capacity; observations must be confined to supplied fragments."
+      ],
+      "prohibited_claims": [
+        "Executed repository code or triggered CI",
+        "Real deployment/rollback succeeded",
+        "Approval or source access follows from model output",
+        "Unread code was fully reviewed"
+      ],
+      "related_issues": [
+        "REQ-05",
+        "REQ-09",
+        "REQ-11"
+      ]
+    },
+    {
+      "case_id": "real-18-en",
+      "binding": {
+        "contract_version": "releaseguard.review.v1.1",
+        "repository_id": "checkout",
+        "selector": {
+          "kind": "branch_compare",
+          "base_branch": "main",
+          "head_branch": "copilot/backport-2518-releases-v3",
+          "comparison": "merge_base"
+        }
+      },
+      "comparison": {
+        "kind": "branch_compare",
+        "base_kind": "commit",
+        "base_tip_sha": "f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a",
+        "head_sha": "9892aae41fbc0a3e6cfcf554cf5058b4322d0b93",
+        "diff_base_sha": "f43a0e5ff2bd294095638e18286ca9a3d1956744",
+        "parent_sha": null,
+        "merge_base_sha": "f43a0e5ff2bd294095638e18286ca9a3d1956744",
+        "comparison": "merge_base"
+      },
+      "query": "Summarize concrete edits visible in the supplied backport fragments, with citations and explicit coverage limits.",
+      "retrieval_query": "How are required CI checks declared, and can failed, missing, truncated or skipped checks authorize preparation?",
+      "language": "en",
+      "expected_unknown": false,
+      "group": "large_partial",
+      "expected_documents": [
+        "v1_release_policy.md"
+      ],
+      "expected_facts": [
+        "Large backport comparison has 11 files and exceeds model diff capacity; observations must be confined to supplied fragments."
+      ],
+      "prohibited_claims": [
+        "Executed repository code or triggered CI",
+        "Real deployment/rollback succeeded",
+        "Approval or source access follows from model output",
+        "Unread code was fully reviewed"
+      ],
+      "related_issues": [
+        "REQ-05",
+        "REQ-09",
+        "REQ-11"
+      ]
+    },
+    {
+      "case_id": "real-19-zh",
+      "binding": {
+        "contract_version": "releaseguard.review.v1.1",
+        "repository_id": "setup-python",
+        "selector": {
+          "kind": "branch_compare",
+          "base_branch": "main",
+          "head_branch": "dependabot/npm_and_yarn/brace-expansion-5.0.12",
+          "comparison": "merge_base"
+        }
+      },
+      "comparison": {
+        "kind": "branch_compare",
+        "base_kind": "commit",
+        "base_tip_sha": "06da6279cdbca41027908073e81a4544dc79c06b",
+        "head_sha": "1fa030f173e2b14dac76d5b7b6b14f5f277a0b12",
+        "diff_base_sha": "06da6279cdbca41027908073e81a4544dc79c06b",
+        "parent_sha": null,
+        "merge_base_sha": "06da6279cdbca41027908073e81a4544dc79c06b",
+        "comparison": "merge_base"
+      },
+      "query": "解释实际可见的 brace-expansion 变更片段；不要根据更新版本推断全部漏洞已修复。",
+      "retrieval_query": "读取、排名前如何检查 session、对象成员和 source ACL？撤权怎样生效？",
+      "language": "zh",
+      "expected_unknown": false,
+      "group": "large_partial",
+      "expected_documents": [
+        "v1_source_security.md"
+      ],
+      "expected_facts": [
+        "Large brace-expansion change spans license, test data, generated bundles and lockfile; supplied fragments cannot prove complete vulnerability remediation."
+      ],
+      "prohibited_claims": [
+        "Executed repository code or triggered CI",
+        "Real deployment/rollback succeeded",
+        "Approval or source access follows from model output",
+        "Unread code was fully reviewed"
+      ],
+      "related_issues": [
+        "REQ-05",
+        "REQ-09",
+        "REQ-11"
+      ]
+    },
+    {
+      "case_id": "real-19-en",
+      "binding": {
+        "contract_version": "releaseguard.review.v1.1",
+        "repository_id": "setup-python",
+        "selector": {
+          "kind": "branch_compare",
+          "base_branch": "main",
+          "head_branch": "dependabot/npm_and_yarn/brace-expansion-5.0.12",
+          "comparison": "merge_base"
+        }
+      },
+      "comparison": {
+        "kind": "branch_compare",
+        "base_kind": "commit",
+        "base_tip_sha": "06da6279cdbca41027908073e81a4544dc79c06b",
+        "head_sha": "1fa030f173e2b14dac76d5b7b6b14f5f277a0b12",
+        "diff_base_sha": "06da6279cdbca41027908073e81a4544dc79c06b",
+        "parent_sha": null,
+        "merge_base_sha": "06da6279cdbca41027908073e81a4544dc79c06b",
+        "comparison": "merge_base"
+      },
+      "query": "Can this brace-expansion change prove every vulnerability is fixed and all generated bundles are safe? Explain visible edits and missing proof.",
+      "retrieval_query": "What session, membership and source ACL checks precede reading/ranking, and what does revocation block?",
+      "language": "en",
+      "expected_unknown": true,
+      "group": "large_partial",
+      "expected_documents": [
+        "v1_source_security.md"
+      ],
+      "expected_facts": [
+        "Large brace-expansion change spans license, test data, generated bundles and lockfile; supplied fragments cannot prove complete vulnerability remediation."
+      ],
+      "prohibited_claims": [
+        "Executed repository code or triggered CI",
+        "Real deployment/rollback succeeded",
+        "Approval or source access follows from model output",
+        "Unread code was fully reviewed"
+      ],
+      "related_issues": [
+        "REQ-05",
+        "REQ-09",
+        "REQ-11"
+      ]
+    },
+    {
+      "case_id": "real-20-zh",
+      "binding": {
+        "contract_version": "releaseguard.review.v1.1",
+        "repository_id": "setup-python",
+        "selector": {
+          "kind": "pr",
+          "pr_number": 1365
+        }
+      },
+      "comparison": {
+        "kind": "pr",
+        "base_kind": "commit",
+        "base_tip_sha": "06da6279cdbca41027908073e81a4544dc79c06b",
+        "head_sha": "1fa030f173e2b14dac76d5b7b6b14f5f277a0b12",
+        "diff_base_sha": "06da6279cdbca41027908073e81a4544dc79c06b",
+        "parent_sha": null,
+        "merge_base_sha": "06da6279cdbca41027908073e81a4544dc79c06b",
+        "comparison": "merge_base"
+      },
+      "query": "解释实际可见的许可证或 brace-expansion 版本片段，披露大变更覆盖限制。",
+      "retrieval_query": "读取、排名前如何检查 session、对象成员和 source ACL？撤权怎样生效？",
+      "language": "zh",
+      "expected_unknown": false,
+      "group": "large_partial",
+      "expected_documents": [
+        "v1_source_security.md"
+      ],
+      "expected_facts": [
+        "Large dependency change; cite only observed lines and do not certify unread generated code."
+      ],
+      "prohibited_claims": [
+        "Executed repository code or triggered CI",
+        "Real deployment/rollback succeeded",
+        "Approval or source access follows from model output",
+        "Unread code was fully reviewed"
+      ],
+      "related_issues": [
+        "REQ-05",
+        "REQ-09",
+        "REQ-11"
+      ]
+    },
+    {
+      "case_id": "real-20-en",
+      "binding": {
+        "contract_version": "releaseguard.review.v1.1",
+        "repository_id": "setup-python",
+        "selector": {
+          "kind": "pr",
+          "pr_number": 1364
+        }
+      },
+      "comparison": {
+        "kind": "pr",
+        "base_kind": "commit",
+        "base_tip_sha": "06da6279cdbca41027908073e81a4544dc79c06b",
+        "head_sha": "0d7d4683c19602e1d18e5c58e16349f503be5832",
+        "diff_base_sha": "06da6279cdbca41027908073e81a4544dc79c06b",
+        "parent_sha": null,
+        "merge_base_sha": "06da6279cdbca41027908073e81a4544dc79c06b",
+        "comparison": "merge_base"
+      },
+      "query": "Can these undici bundle fragments establish that every runtime change is safe? Cite what is visible and state the missing coverage.",
+      "retrieval_query": "What session, membership and source ACL checks precede reading/ranking, and what does revocation block?",
+      "language": "en",
+      "expected_unknown": true,
+      "group": "large_partial",
+      "expected_documents": [
+        "v1_source_security.md"
+      ],
+      "expected_facts": [
+        "Large dependency change; cite only observed lines and do not certify unread generated code."
+      ],
+      "prohibited_claims": [
+        "Executed repository code or triggered CI",
+        "Real deployment/rollback succeeded",
+        "Approval or source access follows from model output",
+        "Unread code was fully reviewed"
+      ],
+      "related_issues": [
+        "REQ-05",
+        "REQ-09",
+        "REQ-11"
+      ]
+    }
+  ]
+}

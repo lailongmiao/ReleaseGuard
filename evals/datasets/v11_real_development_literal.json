@@ -1,0 +1,4 @@
+{
+  "binding": {"repository_id": "checkout", "selector": {"kind": "pr", "pr_number": 2590}},
+  "query": "只解释 package-lock.json 中 undici 的旧版本、新版本和 resolved 地址怎样对应变化，引用两侧实际行。这里问的是字面 diff，不要求证明升级后的运行安全或获得审批。"
+}

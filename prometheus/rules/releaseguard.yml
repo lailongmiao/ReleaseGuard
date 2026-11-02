@@ -1,0 +1,17 @@
+groups:
+  - name: releaseguard_local
+    rules:
+      - alert: ReleaseGuardUnknownResult
+        expr: increase(releaseguard_facts_total{outcome="unknown"}[5m]) > 0
+        for: 0m
+        labels:
+          severity: warning
+        annotations:
+          summary: Unknown result requires read-only reconciliation
+      - alert: ReleaseGuardReadinessUnavailable
+        expr: up{job="fastapi"} == 0
+        for: 2m
+        labels:
+          severity: warning
+        annotations:
+          summary: Local API scrape unavailable; check readiness separately

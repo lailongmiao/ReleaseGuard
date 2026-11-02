@@ -1,0 +1,10 @@
+{
+  "binding": {
+    "repository_id": "checkout",
+    "selector": {
+      "kind": "pr",
+      "pr_number": 2590
+    }
+  },
+  "query": "解释 undici 的旧、新版本和 resolved 地址；engines.node 是否也被修改？请依据实际 diff 区分编辑与未变上下文。"
+}

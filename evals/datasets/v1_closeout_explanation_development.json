@@ -1,0 +1,208 @@
+{
+  "version": "v1-closeout-explanation-development.1",
+  "purpose": "same independent development queries; corpus3/v4/.12 actual retrieved scope; not acceptance",
+  "required_probe_pr": 2557,
+  "corpus_manifest_hash": "9691c85e71b57a98cdc63443e045ee9f1a81f2ffcd19dd3f388b1b3f8525520b",
+  "cases": [
+    {
+      "case_id": "DEV-checks-en",
+      "query": "Describe the order for selecting required checks and accepting current CI results.",
+      "language": "en",
+      "expected": "grounded",
+      "gold_resources": [
+        "v1_release_policy.md",
+        "checkout_validation.md"
+      ],
+      "basis": "development regression of checks; distinct from frozen acceptance questions"
+    },
+    {
+      "case_id": "DEV-checks-zh",
+      "query": "必需检查应在什么时候确定，何时才能根据结果接受当前变更？",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "v1_release_policy.md",
+        "checkout_validation.md"
+      ],
+      "basis": "development regression of checks; distinct from frozen acceptance questions"
+    },
+    {
+      "case_id": "DEV-citation-en",
+      "query": "Does a resolved citation location alone establish that a sentence is true?",
+      "language": "en",
+      "expected": "grounded",
+      "gold_resources": [
+        "v1_source_security.md"
+      ],
+      "basis": "development regression of citation; distinct from frozen acceptance questions"
+    },
+    {
+      "case_id": "DEV-citation-zh",
+      "query": "定位与摘要匹配时，可以直接认定句子的语义正确吗？",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "v1_source_security.md"
+      ],
+      "basis": "development regression of citation; distinct from frozen acceptance questions"
+    },
+    {
+      "case_id": "DEV-compound-en",
+      "query": "State the public-source boundary and live source-access checks as separate claims.",
+      "language": "en",
+      "expected": "grounded",
+      "gold_resources": [
+        "v1_release_policy.md",
+        "v1_source_security.md"
+      ],
+      "basis": "development regression of compound; distinct from frozen acceptance questions"
+    },
+    {
+      "case_id": "DEV-compound-zh",
+      "query": "分别说明公开来源范围与读取前的来源权限检查。",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "v1_release_policy.md",
+        "v1_source_security.md"
+      ],
+      "basis": "development regression of compound; distinct from frozen acceptance questions"
+    },
+    {
+      "case_id": "DEV-unknown-read-en",
+      "query": "Do these materials disclose the production target table definitions?",
+      "language": "en",
+      "expected": "unknown",
+      "gold_resources": [],
+      "basis": "development regression of unknown-read; distinct from frozen acceptance questions"
+    },
+    {
+      "case_id": "DEV-unknown-read-zh",
+      "query": "给定材料提供了真实生产目标的表结构吗？只说明材料范围与缺口。",
+      "language": "zh",
+      "expected": "unknown",
+      "gold_resources": [],
+      "basis": "development regression of unknown-read; distinct from frozen acceptance questions"
+    },
+    {
+      "case_id": "DEV-history-en",
+      "query": "Can these excerpts establish whether a real production deployment occurred?",
+      "language": "en",
+      "expected": "unknown",
+      "gold_resources": [],
+      "basis": "development regression of history; distinct from frozen acceptance questions"
+    },
+    {
+      "case_id": "DEV-history-zh",
+      "query": "这些材料能确定曾发生过真实生产部署吗？",
+      "language": "zh",
+      "expected": "unknown",
+      "gold_resources": [],
+      "basis": "development regression of history; distinct from frozen acceptance questions"
+    },
+    {
+      "case_id": "DEV-only-en",
+      "query": "Output only the three candidate step identifiers, without an introduction or explanation.",
+      "language": "en",
+      "expected": "grounded",
+      "gold_resources": [
+        "v1_verification.md"
+      ],
+      "basis": "development regression of only; distinct from frozen acceptance questions"
+    },
+    {
+      "case_id": "DEV-only-zh",
+      "query": "仅列出允许的三个模拟步骤标识符，不写说明。",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "v1_verification.md"
+      ],
+      "basis": "development regression of only; distinct from frozen acceptance questions"
+    },
+    {
+      "case_id": "DEV-body-en",
+      "query": "Briefly distinguish collecting CI data from successful CI outcomes.",
+      "language": "en",
+      "expected": "grounded",
+      "gold_resources": [
+        "v1_release_policy.md",
+        "checkout_validation.md"
+      ],
+      "basis": "development regression of body; distinct from frozen acceptance questions"
+    },
+    {
+      "case_id": "DEV-body-zh",
+      "query": "简短说明收集CI数据与CI实际通过的区别。",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "v1_release_policy.md",
+        "checkout_validation.md"
+      ],
+      "basis": "development regression of body; distinct from frozen acceptance questions"
+    },
+    {
+      "case_id": "DEV-no-command-en",
+      "query": "Describe checkout cleaning risks without showing any executable commands.",
+      "language": "en",
+      "expected": "grounded",
+      "gold_resources": [
+        "checkout_workspace.md"
+      ],
+      "basis": "development regression of no-command; distinct from frozen acceptance questions"
+    },
+    {
+      "case_id": "DEV-no-command-zh",
+      "query": "说明checkout清理可能影响哪些本地内容，不要展示任何可执行命令。",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "checkout_workspace.md"
+      ],
+      "basis": "development regression of no-command; distinct from frozen acceptance questions"
+    },
+    {
+      "case_id": "DEV-example-en",
+      "query": "Does a single-file example impose its cone-mode setting on every sparse checkout use case?",
+      "language": "en",
+      "expected": "grounded",
+      "gold_resources": [
+        "checkout_sparse.md"
+      ],
+      "basis": "development regression of example; distinct from frozen acceptance questions"
+    },
+    {
+      "case_id": "DEV-example-zh",
+      "query": "单文件示例的cone-mode设置是否意味着所有稀疏检出都必须采用它？",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "checkout_sparse.md"
+      ],
+      "basis": "development regression of example; distinct from frozen acceptance questions"
+    },
+    {
+      "case_id": "DEV-minimal-en",
+      "query": "In two sentences explain the simulation boundary and independent verification.",
+      "language": "en",
+      "expected": "grounded",
+      "gold_resources": [
+        "v1_verification.md",
+        "v1_release_policy.md"
+      ],
+      "basis": "development regression of minimal; distinct from frozen acceptance questions"
+    },
+    {
+      "case_id": "DEV-minimal-zh",
+      "query": "用两句话说明模拟预演的边界与独立验证的用途。",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "v1_verification.md",
+        "v1_release_policy.md"
+      ],
+      "basis": "development regression of minimal; distinct from frozen acceptance questions"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "binding": {"repository_id": "setup-python", "selector": {"kind": "pr", "pr_number": 1366}},
+  "query": "Can this diff prove that the urllib3 upgrade has passed all required tests and is safe to deploy? Explain the actual edit with citations, then identify the missing evidence. Does actions/checkout's usage documentation establish requirements for this repository?"
+}

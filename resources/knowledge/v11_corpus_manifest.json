@@ -1,0 +1,283 @@
+{
+  "version": "v11-reviewed-corpus.1",
+  "documents": [
+    {
+      "filename": "v1_release_policy.md",
+      "role": "application_policy",
+      "sha256": "5ef1ff0523cbf24298c5d0879435d15520f55df66e6c5db813726bc9139dcf96",
+      "origin": "project-reviewed-policy",
+      "commit": "7f9e4219e6a1642a378ec83e1b134fdfd74c952c",
+      "section": "v1_release_policy.md",
+      "license": "project",
+      "review": "retained_approved_policy",
+      "rule_set_id": "application-policy",
+      "repositories": [
+        "*"
+      ],
+      "object_types": [
+        "pr",
+        "commit",
+        "branch_compare"
+      ],
+      "version_condition": "ReleaseGuard V1.1 application policy"
+    },
+    {
+      "filename": "v1_verification.md",
+      "role": "application_policy",
+      "sha256": "d61fc78da55289e1bbdbeb7857bbb52fa7e5fb632eee3eae6f376704a57ec5ef",
+      "origin": "project-reviewed-policy",
+      "commit": "7f9e4219e6a1642a378ec83e1b134fdfd74c952c",
+      "section": "v1_verification.md",
+      "license": "project",
+      "review": "retained_approved_policy",
+      "rule_set_id": "application-policy",
+      "repositories": [
+        "*"
+      ],
+      "object_types": [
+        "pr",
+        "commit",
+        "branch_compare"
+      ],
+      "version_condition": "ReleaseGuard V1.1 application policy"
+    },
+    {
+      "filename": "v1_source_security.md",
+      "role": "application_policy",
+      "sha256": "594ab8d338b7d93e0fdb360b8d3cf08b47ecc477f3026684ac9b8e11132f8d15",
+      "origin": "project-reviewed-policy",
+      "commit": "7f9e4219e6a1642a378ec83e1b134fdfd74c952c",
+      "section": "v1_source_security.md",
+      "license": "project",
+      "review": "retained_approved_policy",
+      "rule_set_id": "application-policy",
+      "repositories": [
+        "*"
+      ],
+      "object_types": [
+        "pr",
+        "commit",
+        "branch_compare"
+      ],
+      "version_condition": "ReleaseGuard V1.1 application policy"
+    },
+    {
+      "filename": "checkout_versions.md",
+      "role": "usage_reference",
+      "sha256": "5e291b7589d0909b0bb9fbe020aa2a036b96e5b6ff120eead3e0b1ec22f84ee1",
+      "origin": "https://github.com/actions/checkout/blob/f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a/README.md",
+      "commit": "f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a",
+      "section": "Checkout v7; Checkout v6; Checkout v5; Checkout v4",
+      "license": "MIT",
+      "review": "assistant_delegated_source_review_2026-10-09",
+      "references": [
+        "https://github.com/actions/checkout/blob/f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a/README.md",
+        "https://github.com/actions/checkout/blob/f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a/action.yml"
+      ],
+      "rule_set_id": "checkout-reference",
+      "repositories": [
+        "checkout"
+      ],
+      "object_types": [
+        "pr",
+        "commit",
+        "branch_compare"
+      ],
+      "version_condition": "Only the upstream versions explicitly described by this pinned excerpt; never repository development policy"
+    },
+    {
+      "filename": "checkout_refs.md",
+      "role": "usage_reference",
+      "sha256": "52c5b53df3024e020cf7a496a15fb792f7081b03a2fbda2118151d93a8f98c13",
+      "origin": "https://github.com/actions/checkout/blob/f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a/README.md",
+      "commit": "f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a",
+      "section": "Usage ref; Checkout pull request HEAD commit instead of merge commit",
+      "license": "MIT",
+      "review": "assistant_delegated_source_review_2026-10-09",
+      "references": [
+        "https://github.com/actions/checkout/blob/f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a/README.md",
+        "https://github.com/actions/checkout/blob/f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a/action.yml"
+      ],
+      "rule_set_id": "checkout-reference",
+      "repositories": [
+        "checkout"
+      ],
+      "object_types": [
+        "pr",
+        "commit",
+        "branch_compare"
+      ],
+      "version_condition": "Only the upstream versions explicitly described by this pinned excerpt; never repository development policy"
+    },
+    {
+      "filename": "checkout_history.md",
+      "role": "usage_reference",
+      "sha256": "7eb32f47ff7f1d6796d54c69104eb775fde01207dae3be343d959f8f245c9498",
+      "origin": "https://github.com/actions/checkout/blob/f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a/action.yml",
+      "commit": "f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a",
+      "section": "inputs.fetch-depth; inputs.fetch-tags",
+      "license": "MIT",
+      "review": "assistant_delegated_source_review_2026-10-09",
+      "references": [
+        "https://github.com/actions/checkout/blob/f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a/README.md",
+        "https://github.com/actions/checkout/blob/f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a/action.yml"
+      ],
+      "rule_set_id": "checkout-reference",
+      "repositories": [
+        "checkout"
+      ],
+      "object_types": [
+        "pr",
+        "commit",
+        "branch_compare"
+      ],
+      "version_condition": "Only the upstream versions explicitly described by this pinned excerpt; never repository development policy"
+    },
+    {
+      "filename": "checkout_credentials.md",
+      "role": "usage_reference",
+      "sha256": "1ca994e1f28a053da60ee46a47185c9c264cc4d350188604578c1f6b8d625615",
+      "origin": "https://github.com/actions/checkout/blob/f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a/README.md",
+      "commit": "f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a",
+      "section": "Usage token; persist-credentials; Recommended permissions",
+      "license": "MIT",
+      "review": "assistant_delegated_source_review_2026-10-09",
+      "references": [
+        "https://github.com/actions/checkout/blob/f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a/README.md",
+        "https://github.com/actions/checkout/blob/f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a/action.yml"
+      ],
+      "rule_set_id": "checkout-reference",
+      "repositories": [
+        "checkout"
+      ],
+      "object_types": [
+        "pr",
+        "commit",
+        "branch_compare"
+      ],
+      "version_condition": "Only the upstream versions explicitly described by this pinned excerpt; never repository development policy"
+    },
+    {
+      "filename": "checkout_workspace.md",
+      "role": "usage_reference",
+      "sha256": "02725242be7ba6ccf913500435113089814a0f4c536ec332c97a2970bc7c9a86",
+      "origin": "https://github.com/actions/checkout/blob/f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a/action.yml",
+      "commit": "f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a",
+      "section": "inputs.path; inputs.clean; inputs.set-safe-directory",
+      "license": "MIT",
+      "review": "assistant_delegated_source_review_2026-10-09",
+      "references": [
+        "https://github.com/actions/checkout/blob/f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a/README.md",
+        "https://github.com/actions/checkout/blob/f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a/action.yml"
+      ],
+      "rule_set_id": "checkout-reference",
+      "repositories": [
+        "checkout"
+      ],
+      "object_types": [
+        "pr",
+        "commit",
+        "branch_compare"
+      ],
+      "version_condition": "Only the upstream versions explicitly described by this pinned excerpt; never repository development policy"
+    },
+    {
+      "filename": "checkout_sparse.md",
+      "role": "usage_reference",
+      "sha256": "6a867897773f320d952392666110a3218d37b55edb6a44c894184f3f7dde662d",
+      "origin": "https://github.com/actions/checkout/blob/f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a/action.yml",
+      "commit": "f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a",
+      "section": "inputs.filter; inputs.sparse-checkout; inputs.sparse-checkout-cone-mode",
+      "license": "MIT",
+      "review": "assistant_delegated_source_review_2026-10-09",
+      "references": [
+        "https://github.com/actions/checkout/blob/f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a/README.md",
+        "https://github.com/actions/checkout/blob/f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a/action.yml"
+      ],
+      "rule_set_id": "checkout-reference",
+      "repositories": [
+        "checkout"
+      ],
+      "object_types": [
+        "pr",
+        "commit",
+        "branch_compare"
+      ],
+      "version_condition": "Only the upstream versions explicitly described by this pinned excerpt; never repository development policy"
+    },
+    {
+      "filename": "checkout_dependencies.md",
+      "role": "usage_reference",
+      "sha256": "bf6d3e1464340170d71bfe5606633d808db232e54a690b34113bbe1af3196dcf",
+      "origin": "https://github.com/actions/checkout/blob/f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a/action.yml",
+      "commit": "f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a",
+      "section": "inputs.submodules; inputs.lfs; inputs.ssh-key",
+      "license": "MIT",
+      "review": "assistant_delegated_source_review_2026-10-09",
+      "references": [
+        "https://github.com/actions/checkout/blob/f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a/README.md",
+        "https://github.com/actions/checkout/blob/f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a/action.yml"
+      ],
+      "rule_set_id": "checkout-reference",
+      "repositories": [
+        "checkout"
+      ],
+      "object_types": [
+        "pr",
+        "commit",
+        "branch_compare"
+      ],
+      "version_condition": "Only the upstream versions explicitly described by this pinned excerpt; never repository development policy"
+    },
+    {
+      "filename": "checkout_validation.md",
+      "role": "usage_reference",
+      "sha256": "d0bc7a64b48c13d11d6e4aaa39a96aaaf8bc8fdf99544e91f41ec2b4f29b2575",
+      "origin": "https://github.com/actions/checkout/blob/f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a/README.md",
+      "commit": "f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a",
+      "section": "Usage; Scenarios; Recommended permissions",
+      "license": "MIT",
+      "review": "assistant_delegated_source_review_2026-10-10; explicitly labelled local project appendix; corpus2 retrieval limitation repair; original three policies unchanged",
+      "references": [
+        "https://github.com/actions/checkout/blob/f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a/README.md",
+        "https://github.com/actions/checkout/blob/f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a/action.yml",
+        "project:resources/knowledge/v1_verification.md"
+      ],
+      "rule_set_id": "checkout-reference",
+      "repositories": [
+        "checkout"
+      ],
+      "object_types": [
+        "pr",
+        "commit",
+        "branch_compare"
+      ],
+      "version_condition": "Only the upstream versions explicitly described by this pinned excerpt; never repository development policy"
+    },
+    {
+      "filename": "checkout_upgrade.md",
+      "role": "usage_reference",
+      "sha256": "b278463e2202310b138f4a3aabc18c1458ac7ee700e8205272e7234b10f8a741",
+      "origin": "https://github.com/actions/checkout/blob/f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a/README.md",
+      "commit": "f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a",
+      "section": "Checkout v7; Checkout v6; Checkout v5",
+      "license": "MIT",
+      "review": "assistant_delegated_source_review_2026-10-10; explicitly labelled local project appendix; corpus2 retrieval limitation repair; original three policies unchanged",
+      "references": [
+        "https://github.com/actions/checkout/blob/f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a/README.md",
+        "https://github.com/actions/checkout/blob/f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a/action.yml",
+        "project:resources/knowledge/v1_verification.md"
+      ],
+      "rule_set_id": "checkout-reference",
+      "repositories": [
+        "checkout"
+      ],
+      "object_types": [
+        "pr",
+        "commit",
+        "branch_compare"
+      ],
+      "version_condition": "Only the upstream versions explicitly described by this pinned excerpt; never repository development policy"
+    }
+  ]
+}

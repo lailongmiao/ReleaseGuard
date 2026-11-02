@@ -1,0 +1,26 @@
+{
+  "version": "v1-closeout-json-wire-development.1",
+  "purpose": "native SDK wire regression and independent output format counterexample; not acceptance",
+  "cases": [
+    {
+      "case_id": "JSON-WIRE-01",
+      "query": "Summarize only the supplied documented staging risk floor, separate approver, and simulation-only policy. Cite the provided policy documents. This question does not ask you to prove external runtime readiness or actual deployment. For fully supported policy facts use no unknowns. Give only the whitelisted simulation candidate steps.",
+      "language": "en",
+      "expected": "grounded",
+      "gold_resources": [
+        "v1_release_policy.md",
+        "v1_verification.md"
+      ]
+    },
+    {
+      "case_id": "JSON-WIRE-02",
+      "query": "请简要说明：Citation定位匹配是否保证语义正确？不要给出操作命令，也不要增加本次PR状态的推测。",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "v1_source_security.md",
+        "checkout_validation.md"
+      ]
+    }
+  ]
+}

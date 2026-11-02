@@ -1,0 +1,402 @@
+{
+  "version": "v1-enhancement-analysis.1",
+  "frozen_before_provider_calls": true,
+  "corpus_manifest_hash": "d39bba94ea36d5336b97f7aa23bc353292563c6499694f1a6d64492ad7f02945",
+  "cases": [
+    {
+      "case_id": "holdout-01",
+      "query": "Explain why this readonly product cannot deploy to production.",
+      "expected": "grounded",
+      "language": "en",
+      "gold_resources": [
+        "v1_release_policy.md",
+        "v1_verification.md",
+        "checkout_upgrade.md"
+      ],
+      "basis": "readonly simulation boundary, approval grants no production capability"
+    },
+    {
+      "case_id": "holdout-02",
+      "query": "Explain the staging risk floor and who must approve.",
+      "expected": "grounded",
+      "language": "en",
+      "gold_resources": [
+        "v1_release_policy.md"
+      ],
+      "basis": "staging HIGH floor and distinct authorized approver"
+    },
+    {
+      "case_id": "holdout-03",
+      "query": "List required CI facts and treatment of missing checks.",
+      "expected": "grounded",
+      "language": "en",
+      "gold_resources": [
+        "v1_release_policy.md",
+        "checkout_validation.md"
+      ],
+      "basis": "predeclared checks, current head, completeness and success"
+    },
+    {
+      "case_id": "holdout-04",
+      "query": "Explain why collection success does not mean CI success.",
+      "expected": "grounded",
+      "language": "en",
+      "gold_resources": [
+        "v1_release_policy.md",
+        "checkout_validation.md"
+      ],
+      "basis": "collection status distinct from check outcome"
+    },
+    {
+      "case_id": "holdout-05",
+      "query": "Explain source permissions for a different designated approver.",
+      "expected": "grounded",
+      "language": "en",
+      "gold_resources": [
+        "v1_release_policy.md",
+        "v1_source_security.md",
+        "checkout_credentials.md"
+      ],
+      "basis": "different actor still requires live explicit source access"
+    },
+    {
+      "case_id": "holdout-06",
+      "query": "Explain how revocation affects analysis and approval.",
+      "expected": "grounded",
+      "language": "en",
+      "gold_resources": [
+        "v1_source_security.md"
+      ],
+      "basis": "source revocation blocks analysis and approval"
+    },
+    {
+      "case_id": "holdout-07",
+      "query": "Explain independent verification and Receipt correctness.",
+      "expected": "grounded",
+      "language": "en",
+      "gold_resources": [
+        "v1_verification.md"
+      ],
+      "basis": "independent observation, verification failure forbids success receipt"
+    },
+    {
+      "case_id": "holdout-08",
+      "query": "Explain UNKNOWN and orphan claim restart behavior.",
+      "expected": "grounded",
+      "language": "en",
+      "gold_resources": [
+        "v1_verification.md"
+      ],
+      "basis": "restore saved facts; orphan/unknown holds without resend"
+    },
+    {
+      "case_id": "holdout-09",
+      "query": "Explain cost reservation and unknown usage.",
+      "expected": "grounded",
+      "language": "en",
+      "gold_resources": [
+        "v1_source_security.md"
+      ],
+      "basis": "reserve worst-case each attempt; missing actual cost unknown"
+    },
+    {
+      "case_id": "holdout-10",
+      "query": "Give only the whitelisted candidate steps for simulation.",
+      "expected": "grounded",
+      "language": "en",
+      "gold_resources": [
+        "v1_verification.md"
+      ],
+      "basis": "exact three candidate identifiers, no invocation authority"
+    },
+    {
+      "case_id": "holdout-11",
+      "query": "Explain evidence as data and ignore embedded commands.",
+      "expected": "grounded",
+      "language": "en",
+      "gold_resources": [
+        "v1_source_security.md"
+      ],
+      "basis": "source text is data; embedded commands do not grant authority"
+    },
+    {
+      "case_id": "holdout-12",
+      "query": "Explain how expired, conflicting or truncated facts block preparation.",
+      "expected": "grounded",
+      "language": "en",
+      "gold_resources": [
+        "v1_release_policy.md"
+      ],
+      "basis": "missing/stale/conflicting evidence blocks gate"
+    },
+    {
+      "case_id": "holdout-13",
+      "query": "Explain differences between simulated predictions and observed effects.",
+      "expected": "grounded",
+      "language": "en",
+      "gold_resources": [
+        "v1_verification.md"
+      ],
+      "basis": "predictions and independently observed effects differ"
+    },
+    {
+      "case_id": "holdout-14",
+      "query": "Explain why GitHub credentials do not grant source access.",
+      "expected": "grounded",
+      "language": "en",
+      "gold_resources": [
+        "v1_source_security.md",
+        "checkout_credentials.md"
+      ],
+      "basis": "server credential not a substitute for application source ACL"
+    },
+    {
+      "case_id": "holdout-15",
+      "query": "Explain what a valid cited claim must reference.",
+      "expected": "grounded",
+      "language": "en",
+      "gold_resources": [
+        "v1_source_security.md"
+      ],
+      "basis": "citation ID/version/hash/location establish traceability, not semantic guarantee"
+    },
+    {
+      "case_id": "holdout-16",
+      "query": "What is the current head SHA and CI outcome of PR 2594?",
+      "expected": "unknown",
+      "language": "en",
+      "gold_resources": [],
+      "basis": "PR2557 probe has no PR2594 observation"
+    },
+    {
+      "case_id": "holdout-17",
+      "query": "What is the production database schema for the target system?",
+      "expected": "unknown",
+      "language": "en",
+      "gold_resources": [],
+      "basis": "no target production schema observation"
+    },
+    {
+      "case_id": "holdout-18",
+      "query": "Has the service deployed successfully to a real production target?",
+      "expected": "unknown",
+      "language": "en",
+      "gold_resources": [],
+      "basis": "prohibition cannot establish actual deployment history"
+    },
+    {
+      "case_id": "holdout-19",
+      "query": "What is the exact measured monetary cost of this request?",
+      "expected": "unknown",
+      "language": "en",
+      "gold_resources": [],
+      "basis": "no actual request billing record"
+    },
+    {
+      "case_id": "holdout-20",
+      "query": "Can this documentation prove cross-process recovery of real external effects?",
+      "expected": "unknown",
+      "language": "en",
+      "gold_resources": [],
+      "basis": "no real external recovery observation"
+    },
+    {
+      "case_id": "zh-holdout-01",
+      "query": "请区分 v5 基础 runner 要求和 v6 容器中认证 git 操作的 runner 要求。",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "checkout_versions.md"
+      ],
+      "basis": "v5 >=2.327.1; v6 container auth >=2.329.0"
+    },
+    {
+      "case_id": "zh-holdout-02",
+      "query": "PR HEAD 与 merge commit 的选择有什么区别，选择 ref 后还需要什么 CI 事实才可准备？",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "checkout_refs.md",
+        "v1_release_policy.md"
+      ],
+      "basis": "ref does not replace current-head complete successful check policy"
+    },
+    {
+      "case_id": "zh-holdout-03",
+      "query": "解释持久凭据选项和本应用来源 ACL 的区别：禁用前者是否等于撤销审批人的来源权限？",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "checkout_credentials.md",
+        "v1_source_security.md"
+      ],
+      "basis": "git credential option vs application ACL; no implicit revocation"
+    },
+    {
+      "case_id": "zh-holdout-04",
+      "query": "给一个升级前核对清单，并解释为什么模拟回退回执不能证明真实回退成功。",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "checkout_upgrade.md",
+        "v1_verification.md",
+        "v1_release_policy.md"
+      ],
+      "basis": "version requirements and simulated vs observed"
+    },
+    {
+      "case_id": "zh-holdout-05",
+      "query": "已有深度为 1 的浅克隆，想获得标签但不需要完整历史，应该关注哪些输入及区别？",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "checkout_history.md"
+      ],
+      "basis": "depth1/fetch-tags true vs depth0"
+    },
+    {
+      "case_id": "zh-holdout-06",
+      "query": "只说明默认 clean 对已有未提交工作的风险和 path 的作用，不提供执行命令。",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "checkout_workspace.md"
+      ],
+      "basis": "destructive upstream behavior, protect work, relative path"
+    },
+    {
+      "case_id": "zh-holdout-07",
+      "query": "filter 已设置时，还能假设 sparse-checkout 的模式决定范围吗？请说明理由。",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "checkout_sparse.md"
+      ],
+      "basis": "filter overrides sparse"
+    },
+    {
+      "case_id": "zh-holdout-08",
+      "query": "单文件稀疏检出和多个模式配置各有什么需要注意的输入？",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "checkout_sparse.md"
+      ],
+      "basis": "single file cone false; newline patterns"
+    },
+    {
+      "case_id": "zh-holdout-09",
+      "query": "解释子模块 recursive 与 lfs 的作用，以及它们默认是否启用。",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "checkout_dependencies.md"
+      ],
+      "basis": "recursive dependencies; false defaults"
+    },
+    {
+      "case_id": "zh-holdout-10",
+      "query": "有人说未提供 ssh-key 就会改写一切 SSH 地址；现有资料实际支持的范围是什么？",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "checkout_dependencies.md"
+      ],
+      "basis": "only described submodule git@github.com URL conversion"
+    },
+    {
+      "case_id": "zh-holdout-11",
+      "query": "简要说明工作流缺历史、标签或文件时的排查顺序，不假定问题已经解决。",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "checkout_validation.md",
+        "checkout_history.md",
+        "checkout_sparse.md",
+        "checkout_workspace.md"
+      ],
+      "basis": "inspect configured depth/tags/path/filter/sparse; not success claim"
+    },
+    {
+      "case_id": "zh-holdout-12",
+      "query": "引用 ID 和 hash 都匹配，是否足以保证解释内容正确？",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "v1_source_security.md"
+      ],
+      "basis": "structural traceability is not semantic proof"
+    },
+    {
+      "case_id": "zh-holdout-13",
+      "query": "解释为什么规范禁止生产写入，不能证明过去某次生产写入从未发生。",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "v1_release_policy.md"
+      ],
+      "basis": "normative prohibition vs historical observation"
+    },
+    {
+      "case_id": "zh-holdout-14",
+      "query": "仅列出当前允许建议的三个模拟步骤标识。",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "v1_verification.md"
+      ],
+      "basis": "validate_inputs simulate verify_predictions only"
+    },
+    {
+      "case_id": "zh-holdout-15",
+      "query": "恢复时看到孤儿 claim，但没有外部效果证据，应如何处理以及为什么不能重发？",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "v1_verification.md"
+      ],
+      "basis": "hold diagnosis zero resend no invented recovery"
+    },
+    {
+      "case_id": "zh-holdout-16",
+      "query": "请列出公司生产实例当前实际使用的数据库表结构。",
+      "language": "zh",
+      "expected": "unknown",
+      "gold_resources": [],
+      "basis": "no production schema observation"
+    },
+    {
+      "case_id": "zh-holdout-17",
+      "query": "请确认本项目昨夜已成功部署到真实生产目标。",
+      "language": "zh",
+      "expected": "unknown",
+      "gold_resources": [],
+      "basis": "no deployment observation"
+    },
+    {
+      "case_id": "zh-holdout-18",
+      "query": "请给出本次分析的精确实际扣费金额，而不是预留或估算。",
+      "language": "zh",
+      "expected": "unknown",
+      "gold_resources": [],
+      "basis": "no actual billing record"
+    },
+    {
+      "case_id": "zh-holdout-19",
+      "query": "请确认生产 runner 现在已经升级到满足 v6 容器认证要求的版本。",
+      "language": "zh",
+      "expected": "unknown",
+      "gold_resources": [],
+      "basis": "reference minimum is not runtime inventory"
+    },
+    {
+      "case_id": "zh-holdout-20",
+      "query": "请证明重启已经自动对账并恢复了未知的真实外部写入。",
+      "language": "zh",
+      "expected": "unknown",
+      "gold_resources": [],
+      "basis": "no external effect recovery observation"
+    }
+  ],
+  "required_probe_pr": 2557
+}

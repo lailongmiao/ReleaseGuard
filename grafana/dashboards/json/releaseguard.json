@@ -1,0 +1,13 @@
+{
+  "uid": "releaseguard-local",
+  "title": "ReleaseGuard local facts (not production evidence)",
+  "schemaVersion": 39,
+  "version": 1,
+  "refresh": "15s",
+  "panels": [
+    {"id": 1, "type": "timeseries", "title": "Committed facts / refusals / UNKNOWN", "datasource": {"type": "prometheus", "uid": "prometheus"}, "gridPos": {"x": 0, "y": 0, "w": 12, "h": 8}, "targets": [{"expr": "sum by (category, outcome) (releaseguard_facts_total)"}]},
+    {"id": 2, "type": "timeseries", "title": "Usage and cost availability", "datasource": {"type": "prometheus", "uid": "prometheus"}, "gridPos": {"x": 12, "y": 0, "w": 12, "h": 8}, "targets": [{"expr": "sum by (role, measurement, quality) (releaseguard_llm_measurements_total)"}]},
+    {"id": 3, "type": "timeseries", "title": "API scrape availability (readiness separate)", "datasource": {"type": "prometheus", "uid": "prometheus"}, "gridPos": {"x": 0, "y": 8, "w": 12, "h": 8}, "targets": [{"expr": "up{job=\"fastapi\"}"}]},
+    {"id": 4, "type": "timeseries", "title": "Committed state and risk enum", "datasource": {"type": "prometheus", "uid": "prometheus"}, "gridPos": {"x": 12, "y": 8, "w": 12, "h": 8}, "targets": [{"expr": "sum by (status, risk) (releaseguard_states_total)"}]}
+  ]
+}

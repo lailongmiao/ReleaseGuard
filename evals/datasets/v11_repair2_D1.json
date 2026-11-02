@@ -1,0 +1,10 @@
+{
+  "binding": {
+    "repository_id": "checkout",
+    "selector": {
+      "kind": "pr",
+      "pr_number": 2593
+    }
+  },
+  "query": "说明 README 和 action.yml 中 filter 与 sparse-checkout 的关系怎样改写，引用实际可见内容。"
+}

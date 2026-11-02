@@ -1,0 +1,56 @@
+{
+  "version": "v1-closeout-development.19",
+  "purpose": "independent effect-vs-name and prior explanation contract development; not final holdout or quality replacement",
+  "required_probe_pr": 2557,
+  "corpus_manifest_hash": "9691c85e71b57a98cdc63443e045ee9f1a81f2ffcd19dd3f388b1b3f8525520b",
+  "cases": [
+    {
+      "case_id": "DEV19-effect-zh",
+      "query": "不展示命令：材料解释了强制清理与硬重置分别对文件产生什么具体效果吗？已有信息和未提供信息分别是什么？",
+      "language": "zh",
+      "expected": "unknown"
+    },
+    {
+      "case_id": "DEV19-effect-en",
+      "query": "What specific file effects do the supplied excerpts establish for forced cleaning and a hard reset? State any missing effect information; no commands.",
+      "language": "en",
+      "expected": "unknown"
+    },
+    {
+      "case_id": "DEV19-clean-timing-zh",
+      "query": "只说明 checkout 的 clean 默认值、何时执行，以及材料给出的未提交内容保护提醒，不展开文件影响。",
+      "language": "zh",
+      "expected": "answer"
+    },
+    {
+      "case_id": "DEV19-equivalent-en",
+      "query": "Can preparation rely on stale evidence? Explain the stated rule, without guessing any numerical expiry time.",
+      "language": "en",
+      "expected": "answer"
+    },
+    {
+      "case_id": "DEV19-cutoff-zh",
+      "query": "证据过期的精确小时数是多少？只依据材料，未知就说明缺少哪项配置。",
+      "language": "zh",
+      "expected": "unknown"
+    },
+    {
+      "case_id": "DEV19-ci-stage-zh",
+      "query": "请用一句话说明已有检查结果进入本项目证据接受的条件，不扩展到后续执行审批。",
+      "language": "zh",
+      "expected": "answer"
+    },
+    {
+      "case_id": "DEV19-proof-en",
+      "query": "Do these excerpts contain actual proof that external real execution recovered successfully? Keep recorded boundaries separate from proof.",
+      "language": "en",
+      "expected": "unknown"
+    },
+    {
+      "case_id": "DEV19-names-zh",
+      "query": "只列出资料明确允许的模拟候选步骤标识。",
+      "language": "zh",
+      "expected": "answer"
+    }
+  ]
+}

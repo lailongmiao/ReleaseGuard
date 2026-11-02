@@ -1,0 +1,35 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+wheels/
+*.egg-info
+*.jsonl
+
+# Virtual environments
+.venv
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Runtime logs
+logs/
+
+# Misc
+*.ipynb
+.playwright-mcp/
+.playwright-cli/
+%SystemDrive%/
+
+# Reports
+evals/reports/
+
+# Internal development records are not part of the public distribution
+docs/

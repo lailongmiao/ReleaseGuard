@@ -1,0 +1,122 @@
+{
+  "version": "v1-closeout-explanation-development.18",
+  "purpose": "new independent short counterexamples for claim/body alignment, scoped rules and factual unknown; no resend of DEV-compound-zh unknown, not acceptance set",
+  "required_probe_pr": 2557,
+  "corpus_manifest_hash": "9691c85e71b57a98cdc63443e045ee9f1a81f2ffcd19dd3f388b1b3f8525520b",
+  "cases": [
+    {
+      "case_id": "DEV18-ttl-en",
+      "query": "Can you give the configured number of minutes before the local GitHub check facts expire?",
+      "language": "en",
+      "expected": "unknown",
+      "gold_resources": [],
+      "basis": "independent development counterexample; never substitutes missing/failed acceptance rows"
+    },
+    {
+      "case_id": "DEV18-ttl-zh",
+      "query": "本地系统把GitHub检查事实有效期设为多少分钟？",
+      "language": "zh",
+      "expected": "unknown",
+      "gold_resources": [],
+      "basis": "independent development counterexample; never substitutes missing/failed acceptance rows"
+    },
+    {
+      "case_id": "DEV18-proof-en",
+      "query": "What empirical evidence in the excerpts establishes recovery of external effects following a process restart?",
+      "language": "en",
+      "expected": "unknown",
+      "gold_resources": [],
+      "basis": "independent development counterexample; never substitutes missing/failed acceptance rows"
+    },
+    {
+      "case_id": "DEV18-proof-zh",
+      "query": "摘录中有哪些实测证据可以证明进程重启后恢复了外部操作效果？",
+      "language": "zh",
+      "expected": "unknown",
+      "gold_resources": [],
+      "basis": "independent development counterexample; never substitutes missing/failed acceptance rows"
+    },
+    {
+      "case_id": "DEV18-ci-en",
+      "query": "For the CI acceptance stage, when must check names be fixed and what must their current results satisfy?",
+      "language": "en",
+      "expected": "grounded",
+      "gold_resources": [
+        "v1_release_policy.md",
+        "checkout_validation.md"
+      ],
+      "basis": "independent development counterexample; never substitutes missing/failed acceptance rows"
+    },
+    {
+      "case_id": "DEV18-ci-zh",
+      "query": "在CI接受环节，检查名称何时冻结，当前检查结果需要满足什么？",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "v1_release_policy.md",
+        "checkout_validation.md"
+      ],
+      "basis": "independent development counterexample; never substitutes missing/failed acceptance rows"
+    },
+    {
+      "case_id": "DEV18-stale-en",
+      "query": "Explain the preparation rule for stale, mutually inconsistent, or incomplete check evidence.",
+      "language": "en",
+      "expected": "grounded",
+      "gold_resources": [
+        "v1_release_policy.md"
+      ],
+      "basis": "independent development counterexample; never substitutes missing/failed acceptance rows"
+    },
+    {
+      "case_id": "DEV18-names-zh",
+      "query": "只写允许建议的三个模拟步骤标识符，不解释。",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "v1_verification.md",
+        "checkout_upgrade.md"
+      ],
+      "basis": "independent development counterexample; never substitutes missing/failed acceptance rows"
+    },
+    {
+      "case_id": "DEV18-schema-zh",
+      "query": "这些摘录提供真实目标数据库的完整表结构吗？仅说明信息缺口。",
+      "language": "zh",
+      "expected": "unknown",
+      "gold_resources": [],
+      "basis": "independent development counterexample; never substitutes missing/failed acceptance rows"
+    },
+    {
+      "case_id": "DEV18-citation-en",
+      "query": "In one sentence, distinguish citation traceability from support for a claim.",
+      "language": "en",
+      "expected": "grounded",
+      "gold_resources": [
+        "v1_source_security.md",
+        "checkout_validation.md"
+      ],
+      "basis": "independent development counterexample; never substitutes missing/failed acceptance rows"
+    },
+    {
+      "case_id": "DEV18-only-en",
+      "query": "Only name the allowed simulation suggestion identifiers.",
+      "language": "en",
+      "expected": "grounded",
+      "gold_resources": [
+        "v1_verification.md"
+      ],
+      "basis": "independent development counterexample; never substitutes missing/failed acceptance rows"
+    },
+    {
+      "case_id": "DEV18-clean-zh",
+      "query": "不展示命令，说明checkout强制清理和硬重置的作用。",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "checkout_workspace.md"
+      ],
+      "basis": "independent development counterexample; never substitutes missing/failed acceptance rows"
+    }
+  ]
+}

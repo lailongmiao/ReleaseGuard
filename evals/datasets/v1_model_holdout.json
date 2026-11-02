@@ -1,0 +1,116 @@
+{
+  "version": "v1-model-holdout.1",
+  "frozen_before_provider_calls": true,
+  "corpus": "three reviewed resources/knowledge Markdown files; no personal data or credentials",
+  "cases": [
+    {
+      "case_id": "holdout-01",
+      "query": "Explain why this readonly product cannot deploy to production.",
+      "expected": "grounded"
+    },
+    {
+      "case_id": "holdout-02",
+      "query": "Explain the staging risk floor and who must approve.",
+      "expected": "grounded"
+    },
+    {
+      "case_id": "holdout-03",
+      "query": "List required CI facts and treatment of missing checks.",
+      "expected": "grounded"
+    },
+    {
+      "case_id": "holdout-04",
+      "query": "Explain why collection success does not mean CI success.",
+      "expected": "grounded"
+    },
+    {
+      "case_id": "holdout-05",
+      "query": "Explain source permissions for a different designated approver.",
+      "expected": "grounded"
+    },
+    {
+      "case_id": "holdout-06",
+      "query": "Explain how revocation affects analysis and approval.",
+      "expected": "grounded"
+    },
+    {
+      "case_id": "holdout-07",
+      "query": "Explain independent verification and Receipt correctness.",
+      "expected": "grounded"
+    },
+    {
+      "case_id": "holdout-08",
+      "query": "Explain UNKNOWN and orphan claim restart behavior.",
+      "expected": "grounded"
+    },
+    {
+      "case_id": "holdout-09",
+      "query": "Explain cost reservation and unknown usage.",
+      "expected": "grounded"
+    },
+    {
+      "case_id": "holdout-10",
+      "query": "Give only the whitelisted candidate steps for simulation.",
+      "expected": "grounded"
+    },
+    {
+      "case_id": "holdout-11",
+      "query": "Explain evidence as data and ignore embedded commands.",
+      "expected": "grounded"
+    },
+    {
+      "case_id": "holdout-12",
+      "query": "Explain how expired, conflicting or truncated facts block preparation.",
+      "expected": "grounded"
+    },
+    {
+      "case_id": "holdout-13",
+      "query": "Explain differences between simulated predictions and observed effects.",
+      "expected": "grounded"
+    },
+    {
+      "case_id": "holdout-14",
+      "query": "Explain why GitHub credentials do not grant source access.",
+      "expected": "grounded"
+    },
+    {
+      "case_id": "holdout-15",
+      "query": "Explain what a valid cited claim must reference.",
+      "expected": "grounded"
+    },
+    {
+      "case_id": "holdout-16",
+      "query": "What is the current head SHA and CI outcome of PR 2594?",
+      "expected": "unknown"
+    },
+    {
+      "case_id": "holdout-17",
+      "query": "What is the production database schema for the target system?",
+      "expected": "unknown"
+    },
+    {
+      "case_id": "holdout-18",
+      "query": "Has the service deployed successfully to a real production target?",
+      "expected": "unknown"
+    },
+    {
+      "case_id": "holdout-19",
+      "query": "What is the exact measured monetary cost of this request?",
+      "expected": "unknown"
+    },
+    {
+      "case_id": "holdout-20",
+      "query": "Can this documentation prove cross-process recovery of real external effects?",
+      "expected": "unknown"
+    }
+  ],
+  "thresholds": {
+    "citation_correct": 1,
+    "grounded_macro": 0.95,
+    "unknown_correct": 0.95,
+    "human_mean": 4,
+    "human_min": 3,
+    "p95_seconds": 30,
+    "min_requests": 40
+  }
+}

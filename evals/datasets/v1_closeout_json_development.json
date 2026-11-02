@@ -1,0 +1,24 @@
+{
+  "version": "v1-closeout-json-development.1",
+  "purpose": "independent development reproduction, not acceptance or hidden holdout",
+  "cases": [
+    {
+      "case_id": "JSON-DEV-01",
+      "query": "What is the documented minimum staging risk level, and who must approve it? Explain the rule in one sentence.",
+      "language": "en",
+      "expected": "grounded",
+      "gold_resources": [
+        "v1_release_policy.md"
+      ]
+    },
+    {
+      "case_id": "JSON-DEV-02",
+      "query": "请用一句话说明本项目模拟回执能证明什么，不评价某次真实部署。",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "v1_verification.md"
+      ]
+    }
+  ]
+}

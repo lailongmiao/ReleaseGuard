@@ -1,0 +1,97 @@
+{
+  "version": "v11-repair2-development.1",
+  "provenance": "synthetic_independent_counterexamples",
+  "cases": [
+    {
+      "id": "move",
+      "group": "A",
+      "path": "limit.py",
+      "before": "def limit(enabled, value):\n    if enabled and value is None:\n        value = 8\n    return value\n",
+      "after": "def normalize(enabled, value):\n    if enabled and value is None:\n        value = 8\n    return value\n\ndef limit(enabled, value):\n    return normalize(enabled, value)\n",
+      "expected": "relocated",
+      "facts": [
+        "value=8 and enabled/value-is-None condition existed before; helper is new but default behavior is not new"
+      ],
+      "forbidden": [
+        "default 8 is newly introduced",
+        "previous callers now use 8 for the first time"
+      ]
+    },
+    {
+      "id": "default",
+      "group": "A",
+      "path": "retry.py",
+      "before": "def retries(value):\n    return 8 if value is None else value\n",
+      "after": "def retries(value):\n    return 16 if value is None else value\n",
+      "expected": "behavior_modified",
+      "facts": [
+        "default for None changes 8 to 16; explicit value unchanged"
+      ],
+      "forbidden": [
+        "only relocation",
+        "no behavior change"
+      ]
+    },
+    {
+      "id": "disable",
+      "group": "A",
+      "path": "cache.py",
+      "before": "def cache_policy():\n    return \"memory\"\n",
+      "after": "def cache_policy(disabled=False):\n    if disabled:\n        return None\n    return \"memory\"\n",
+      "expected": "behavior_modified",
+      "facts": [
+        "default memory already existed and remains; new disabled=True opts out"
+      ],
+      "forbidden": [
+        "memory caching is newly added",
+        "only relocation",
+        "no behavioral change"
+      ]
+    },
+    {
+      "id": "docs",
+      "group": "B",
+      "path": "README.md",
+      "before": "Pass a duration to set the timeout.\n",
+      "after": "Pass a duration in seconds to set the timeout.\n",
+      "expected": "documentation",
+      "facts": [
+        "only wording specifies units; no runtime code evidence"
+      ],
+      "forbidden": [
+        "timeout units changed at runtime",
+        "old workflows now interpret milliseconds as seconds"
+      ]
+    },
+    {
+      "id": "condition",
+      "group": "B",
+      "path": "mode.py",
+      "before": "def mode(enabled, admin):\n    result = None\n    if enabled:\n        result = \"fast\"\n    return result\n",
+      "after": "def normalize(enabled, admin):\n    result = None\n    if enabled and admin:\n        result = \"fast\"\n    return result\n\ndef mode(enabled, admin):\n    return normalize(enabled, admin)\n",
+      "expected": "behavior_modified",
+      "facts": [
+        "assignment moved but condition now requires admin; enabled=True/admin=False changes fast to None"
+      ],
+      "forbidden": [
+        "pure relocation with unchanged behavior",
+        "same literal proves equivalence"
+      ]
+    },
+    {
+      "id": "context",
+      "group": "B",
+      "path": "settings.py",
+      "before": "limit = 12\ntimeout = 3\nretries = 2\n",
+      "after": "limit = 12\ntimeout = 5\nretries = 2\n",
+      "expected": "literal_edit",
+      "facts": [
+        "timeout 3 to 5 edited; limit12 and retries2 are unchanged context"
+      ],
+      "forbidden": [
+        "limit changed",
+        "retries changed"
+      ]
+    }
+  ]
+}

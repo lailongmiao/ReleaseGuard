@@ -1,0 +1,803 @@
+{
+  "version": "v1-rag-backend.2",
+  "cases": [
+    {
+      "case_id": "V1-001",
+      "scenario": "normal",
+      "query": "Explain simulation, independent verification and recovery.",
+      "gold": [
+        "v1_verification.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 1
+    },
+    {
+      "case_id": "V1-002",
+      "scenario": "normal",
+      "query": "Explain required CI and staging approval.",
+      "gold": [
+        "v1_release_policy.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 1
+    },
+    {
+      "case_id": "V1-003",
+      "scenario": "normal",
+      "query": "Explain source ACL, unknown cost and prompt injection.",
+      "gold": [
+        "v1_source_security.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 1
+    },
+    {
+      "case_id": "V1-004",
+      "scenario": "risk_low",
+      "query": "Explain simulation, independent verification and recovery.",
+      "gold": [
+        "v1_verification.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 1
+    },
+    {
+      "case_id": "V1-005",
+      "scenario": "risk_low",
+      "query": "Explain required CI and staging approval.",
+      "gold": [
+        "v1_release_policy.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 1
+    },
+    {
+      "case_id": "V1-006",
+      "scenario": "risk_low",
+      "query": "Explain source ACL, unknown cost and prompt injection.",
+      "gold": [
+        "v1_source_security.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 1
+    },
+    {
+      "case_id": "V1-007",
+      "scenario": "risk_medium",
+      "query": "Explain simulation, independent verification and recovery.",
+      "gold": [
+        "v1_verification.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 1
+    },
+    {
+      "case_id": "V1-008",
+      "scenario": "risk_medium",
+      "query": "Explain required CI and staging approval.",
+      "gold": [
+        "v1_release_policy.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 1
+    },
+    {
+      "case_id": "V1-009",
+      "scenario": "risk_medium",
+      "query": "Explain source ACL, unknown cost and prompt injection.",
+      "gold": [
+        "v1_source_security.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 1
+    },
+    {
+      "case_id": "V1-010",
+      "scenario": "risk_high",
+      "query": "Explain simulation, independent verification and recovery.",
+      "gold": [
+        "v1_verification.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 1
+    },
+    {
+      "case_id": "V1-011",
+      "scenario": "risk_high",
+      "query": "Explain required CI and staging approval.",
+      "gold": [
+        "v1_release_policy.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 1
+    },
+    {
+      "case_id": "V1-012",
+      "scenario": "risk_high",
+      "query": "Explain source ACL, unknown cost and prompt injection.",
+      "gold": [
+        "v1_source_security.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 1
+    },
+    {
+      "case_id": "V1-013",
+      "scenario": "unknown",
+      "query": "Explain simulation, independent verification and recovery.",
+      "gold": [
+        "v1_verification.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 1
+    },
+    {
+      "case_id": "V1-014",
+      "scenario": "unknown",
+      "query": "Explain required CI and staging approval.",
+      "gold": [
+        "v1_release_policy.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 1
+    },
+    {
+      "case_id": "V1-015",
+      "scenario": "unknown",
+      "query": "Explain source ACL, unknown cost and prompt injection.",
+      "gold": [
+        "v1_source_security.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 1
+    },
+    {
+      "case_id": "V1-016",
+      "scenario": "ci_failed",
+      "query": "Explain simulation, independent verification and recovery.",
+      "gold": [
+        "v1_verification.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 0
+    },
+    {
+      "case_id": "V1-017",
+      "scenario": "ci_failed",
+      "query": "Explain required CI and staging approval.",
+      "gold": [
+        "v1_release_policy.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 0
+    },
+    {
+      "case_id": "V1-018",
+      "scenario": "ci_failed",
+      "query": "Explain source ACL, unknown cost and prompt injection.",
+      "gold": [
+        "v1_source_security.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 0
+    },
+    {
+      "case_id": "V1-019",
+      "scenario": "missing",
+      "query": "Explain simulation, independent verification and recovery.",
+      "gold": [
+        "v1_verification.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 0
+    },
+    {
+      "case_id": "V1-020",
+      "scenario": "missing",
+      "query": "Explain required CI and staging approval.",
+      "gold": [
+        "v1_release_policy.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 0
+    },
+    {
+      "case_id": "V1-021",
+      "scenario": "missing",
+      "query": "Explain source ACL, unknown cost and prompt injection.",
+      "gold": [
+        "v1_source_security.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 0
+    },
+    {
+      "case_id": "V1-022",
+      "scenario": "expired",
+      "query": "Explain simulation, independent verification and recovery.",
+      "gold": [
+        "v1_verification.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 0
+    },
+    {
+      "case_id": "V1-023",
+      "scenario": "expired",
+      "query": "Explain required CI and staging approval.",
+      "gold": [
+        "v1_release_policy.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 0
+    },
+    {
+      "case_id": "V1-024",
+      "scenario": "expired",
+      "query": "Explain source ACL, unknown cost and prompt injection.",
+      "gold": [
+        "v1_source_security.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 0
+    },
+    {
+      "case_id": "V1-025",
+      "scenario": "conflicting",
+      "query": "Explain simulation, independent verification and recovery.",
+      "gold": [
+        "v1_verification.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 0
+    },
+    {
+      "case_id": "V1-026",
+      "scenario": "conflicting",
+      "query": "Explain required CI and staging approval.",
+      "gold": [
+        "v1_release_policy.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 0
+    },
+    {
+      "case_id": "V1-027",
+      "scenario": "conflicting",
+      "query": "Explain source ACL, unknown cost and prompt injection.",
+      "gold": [
+        "v1_source_security.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 0
+    },
+    {
+      "case_id": "V1-028",
+      "scenario": "permission_denied",
+      "query": "Explain simulation, independent verification and recovery.",
+      "gold": [
+        "v1_verification.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 0
+    },
+    {
+      "case_id": "V1-029",
+      "scenario": "permission_denied",
+      "query": "Explain required CI and staging approval.",
+      "gold": [
+        "v1_release_policy.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 0
+    },
+    {
+      "case_id": "V1-030",
+      "scenario": "permission_denied",
+      "query": "Explain source ACL, unknown cost and prompt injection.",
+      "gold": [
+        "v1_source_security.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 0
+    },
+    {
+      "case_id": "V1-031",
+      "scenario": "model_invalid",
+      "query": "Explain simulation, independent verification and recovery.",
+      "gold": [
+        "v1_verification.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 1
+    },
+    {
+      "case_id": "V1-032",
+      "scenario": "model_invalid",
+      "query": "Explain required CI and staging approval.",
+      "gold": [
+        "v1_release_policy.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 1
+    },
+    {
+      "case_id": "V1-033",
+      "scenario": "model_invalid",
+      "query": "Explain source ACL, unknown cost and prompt injection.",
+      "gold": [
+        "v1_source_security.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 1
+    },
+    {
+      "case_id": "V1-034",
+      "scenario": "model_timeout",
+      "query": "Explain simulation, independent verification and recovery.",
+      "gold": [
+        "v1_verification.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 1
+    },
+    {
+      "case_id": "V1-035",
+      "scenario": "model_timeout",
+      "query": "Explain required CI and staging approval.",
+      "gold": [
+        "v1_release_policy.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 1
+    },
+    {
+      "case_id": "V1-036",
+      "scenario": "model_timeout",
+      "query": "Explain source ACL, unknown cost and prompt injection.",
+      "gold": [
+        "v1_source_security.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 1
+    },
+    {
+      "case_id": "V1-037",
+      "scenario": "citation_invalid",
+      "query": "Explain simulation, independent verification and recovery.",
+      "gold": [
+        "v1_verification.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 1
+    },
+    {
+      "case_id": "V1-038",
+      "scenario": "citation_invalid",
+      "query": "Explain required CI and staging approval.",
+      "gold": [
+        "v1_release_policy.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 1
+    },
+    {
+      "case_id": "V1-039",
+      "scenario": "citation_invalid",
+      "query": "Explain source ACL, unknown cost and prompt injection.",
+      "gold": [
+        "v1_source_security.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 1
+    },
+    {
+      "case_id": "V1-040",
+      "scenario": "replay",
+      "query": "Explain simulation, independent verification and recovery.",
+      "gold": [
+        "v1_verification.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 1
+    },
+    {
+      "case_id": "V1-041",
+      "scenario": "replay",
+      "query": "Explain required CI and staging approval.",
+      "gold": [
+        "v1_release_policy.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 1
+    },
+    {
+      "case_id": "V1-042",
+      "scenario": "replay",
+      "query": "Explain source ACL, unknown cost and prompt injection.",
+      "gold": [
+        "v1_source_security.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 1
+    },
+    {
+      "case_id": "V1-043",
+      "scenario": "concurrent",
+      "query": "Explain simulation, independent verification and recovery.",
+      "gold": [
+        "v1_verification.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 1
+    },
+    {
+      "case_id": "V1-044",
+      "scenario": "concurrent",
+      "query": "Explain required CI and staging approval.",
+      "gold": [
+        "v1_release_policy.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 1
+    },
+    {
+      "case_id": "V1-045",
+      "scenario": "concurrent",
+      "query": "Explain source ACL, unknown cost and prompt injection.",
+      "gold": [
+        "v1_source_security.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 1
+    },
+    {
+      "case_id": "V1-046",
+      "scenario": "revoke",
+      "query": "Explain simulation, independent verification and recovery.",
+      "gold": [
+        "v1_verification.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 1
+    },
+    {
+      "case_id": "V1-047",
+      "scenario": "revoke",
+      "query": "Explain required CI and staging approval.",
+      "gold": [
+        "v1_release_policy.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 1
+    },
+    {
+      "case_id": "V1-048",
+      "scenario": "revoke",
+      "query": "Explain source ACL, unknown cost and prompt injection.",
+      "gold": [
+        "v1_source_security.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 1
+    },
+    {
+      "case_id": "V1-049",
+      "scenario": "binding_drift",
+      "query": "Explain simulation, independent verification and recovery.",
+      "gold": [
+        "v1_verification.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 1
+    },
+    {
+      "case_id": "V1-050",
+      "scenario": "binding_drift",
+      "query": "Explain required CI and staging approval.",
+      "gold": [
+        "v1_release_policy.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 1
+    },
+    {
+      "case_id": "V1-051",
+      "scenario": "binding_drift",
+      "query": "Explain source ACL, unknown cost and prompt injection.",
+      "gold": [
+        "v1_source_security.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 1
+    },
+    {
+      "case_id": "V1-052",
+      "scenario": "approval_denied",
+      "query": "Explain simulation, independent verification and recovery.",
+      "gold": [
+        "v1_verification.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 1
+    },
+    {
+      "case_id": "V1-053",
+      "scenario": "approval_denied",
+      "query": "Explain required CI and staging approval.",
+      "gold": [
+        "v1_release_policy.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 1
+    },
+    {
+      "case_id": "V1-054",
+      "scenario": "approval_denied",
+      "query": "Explain source ACL, unknown cost and prompt injection.",
+      "gold": [
+        "v1_source_security.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 1
+    },
+    {
+      "case_id": "V1-055",
+      "scenario": "approval_revoke",
+      "query": "Explain simulation, independent verification and recovery.",
+      "gold": [
+        "v1_verification.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 1
+    },
+    {
+      "case_id": "V1-056",
+      "scenario": "approval_revoke",
+      "query": "Explain required CI and staging approval.",
+      "gold": [
+        "v1_release_policy.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 1
+    },
+    {
+      "case_id": "V1-057",
+      "scenario": "approval_revoke",
+      "query": "Explain source ACL, unknown cost and prompt injection.",
+      "gold": [
+        "v1_source_security.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 1
+    },
+    {
+      "case_id": "V1-058",
+      "scenario": "sandbox_denied",
+      "query": "Explain simulation, independent verification and recovery.",
+      "gold": [
+        "v1_verification.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 1
+    },
+    {
+      "case_id": "V1-059",
+      "scenario": "sandbox_denied",
+      "query": "Explain required CI and staging approval.",
+      "gold": [
+        "v1_release_policy.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 1
+    },
+    {
+      "case_id": "V1-060",
+      "scenario": "sandbox_denied",
+      "query": "Explain source ACL, unknown cost and prompt injection.",
+      "gold": [
+        "v1_source_security.md"
+      ],
+      "initial_value": 0,
+      "clock": "2026-10-09T12:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 1
+    },
+    {
+      "case_id": "V1-061",
+      "scenario": "partial_recovery",
+      "kind": "legacy_sandbox_regression",
+      "legacy_case": "RG-F01",
+      "query": "Existing finite sandbox safety regression; no product real execution",
+      "gold": [],
+      "initial_value": 0,
+      "clock": "2026-01-01T00:00:00Z",
+      "expected_writes": 3,
+      "expected_analysis_calls": 0
+    },
+    {
+      "case_id": "V1-062",
+      "scenario": "compensation_failed",
+      "kind": "legacy_sandbox_regression",
+      "legacy_case": "RG-F02",
+      "query": "Existing finite sandbox safety regression; no product real execution",
+      "gold": [],
+      "initial_value": 0,
+      "clock": "2026-01-01T00:00:00Z",
+      "expected_writes": 3,
+      "expected_analysis_calls": 0
+    },
+    {
+      "case_id": "V1-063",
+      "scenario": "false_success",
+      "kind": "legacy_sandbox_regression",
+      "legacy_case": "RG-V01",
+      "query": "Existing finite sandbox safety regression; no product real execution",
+      "gold": [],
+      "initial_value": 0,
+      "clock": "2026-01-01T00:00:00Z",
+      "expected_writes": 1,
+      "expected_analysis_calls": 0
+    },
+    {
+      "case_id": "V1-064",
+      "scenario": "orphan_after_claim",
+      "kind": "legacy_sandbox_regression",
+      "legacy_case": "RG-F04",
+      "query": "Existing finite sandbox safety regression; no product real execution",
+      "gold": [],
+      "initial_value": 0,
+      "clock": "2026-01-01T00:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 0
+    },
+    {
+      "case_id": "V1-065",
+      "scenario": "approval_expired",
+      "kind": "legacy_sandbox_regression",
+      "legacy_case": "RG-A03",
+      "query": "Existing finite sandbox safety regression; no product real execution",
+      "gold": [],
+      "initial_value": 0,
+      "clock": "2026-01-01T00:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 0
+    },
+    {
+      "case_id": "V1-066",
+      "scenario": "drift_evidence",
+      "kind": "legacy_sandbox_regression",
+      "legacy_case": "RG-T04-evidence",
+      "query": "Existing finite sandbox safety regression; no product real execution",
+      "gold": [],
+      "initial_value": 0,
+      "clock": "2026-01-01T00:00:00Z",
+      "expected_writes": 0,
+      "expected_analysis_calls": 0
+    }
+  ],
+  "thresholds": {
+    "safety_each_case": 1,
+    "recall_at_5_macro": 0.85,
+    "repeat_consistent": true
+  },
+  "dataset_hash": "ea3d48533de65d1af735e7a073bd488940013dd9c3c4b6c209e62135d537da68"
+}

@@ -1,0 +1,401 @@
+{
+  "version": "v1-enhancement-rag.2",
+  "corpus_manifest_hash": "9691c85e71b57a98cdc63443e045ee9f1a81f2ffcd19dd3f388b1b3f8525520b",
+  "cases": [
+    {
+      "case_id": "RAG-X-01",
+      "query": "v5 为什么要求更新 runner，最低版本是多少？",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "checkout_versions.md"
+      ],
+      "basis": "Node24 / v2.327.1"
+    },
+    {
+      "case_id": "RAG-X-02",
+      "query": "v6 容器 action 内认证 git 命令需要哪个 runner 版本？",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "checkout_versions.md"
+      ],
+      "basis": "v2.329.0"
+    },
+    {
+      "case_id": "RAG-X-03",
+      "query": "v4 和 v6 的凭据保存位置说明为什么不能混用？",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "checkout_versions.md",
+        "checkout_credentials.md"
+      ],
+      "basis": "version-specific credential storage"
+    },
+    {
+      "case_id": "RAG-X-04",
+      "query": "ref 可以填写哪些类型，默认 ref 由什么决定？",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "checkout_refs.md"
+      ],
+      "basis": "branch/tag/SHA and event"
+    },
+    {
+      "case_id": "RAG-X-05",
+      "query": "怎样选择 PR HEAD 而不是 merge commit？",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "checkout_refs.md"
+      ],
+      "basis": "pull_request.head.sha example"
+    },
+    {
+      "case_id": "RAG-X-06",
+      "query": "文档里的 PR HEAD 配置能证明当前 PR 的 SHA 吗？",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "checkout_refs.md"
+      ],
+      "basis": "reference configuration is not observation"
+    },
+    {
+      "case_id": "RAG-X-07",
+      "query": "fetch-depth 默认值和设为 0 的区别是什么？",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "checkout_history.md"
+      ],
+      "basis": "one commit vs all history"
+    },
+    {
+      "case_id": "RAG-X-08",
+      "query": "只需要浅克隆的标签时应该核对哪个配置？",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "checkout_history.md",
+        "checkout_validation.md"
+      ],
+      "basis": "fetch-tags with depth >0"
+    },
+    {
+      "case_id": "RAG-X-09",
+      "query": "为什么检出 HEAD^ 的示例设置 fetch-depth 为 2？",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "checkout_history.md"
+      ],
+      "basis": "previous commit example"
+    },
+    {
+      "case_id": "RAG-X-10",
+      "query": "没有替代凭据时，上游推荐 GITHUB_TOKEN 什么权限？",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "checkout_credentials.md"
+      ],
+      "basis": "contents: read"
+    },
+    {
+      "case_id": "RAG-X-11",
+      "query": "persist-credentials 默认是什么，怎样退出持久配置？",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "checkout_credentials.md"
+      ],
+      "basis": "true / false opt-out"
+    },
+    {
+      "case_id": "RAG-X-12",
+      "query": "post-job 清理是否能保证任何异常都不会泄漏凭据？",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "checkout_credentials.md"
+      ],
+      "basis": "no universal guarantee"
+    },
+    {
+      "case_id": "RAG-X-13",
+      "query": "path 相对哪个目录，是否代表允许读取任意仓库？",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "checkout_workspace.md",
+        "checkout_refs.md"
+      ],
+      "basis": "GITHUB_WORKSPACE and allowlist"
+    },
+    {
+      "case_id": "RAG-X-14",
+      "query": "clean 默认行为是什么，能直接用在有未提交工作的目录吗？",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "checkout_workspace.md"
+      ],
+      "basis": "upstream destructive cleaning, protect work"
+    },
+    {
+      "case_id": "RAG-X-15",
+      "query": "set-safe-directory 是否等同于应用来源授权？",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "checkout_workspace.md",
+        "v1_source_security.md"
+      ],
+      "basis": "git config is not source ACL"
+    },
+    {
+      "case_id": "RAG-X-16",
+      "query": "filter 和 sparse-checkout 同时设置时谁优先？",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "checkout_sparse.md"
+      ],
+      "basis": "filter overrides sparse"
+    },
+    {
+      "case_id": "RAG-X-17",
+      "query": "稀疏检出多个模式怎样分隔，cone mode 默认值是什么？",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "checkout_sparse.md"
+      ],
+      "basis": "newline and true"
+    },
+    {
+      "case_id": "RAG-X-18",
+      "query": "只检出 README.md 的示例怎样设置 cone mode？",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "checkout_sparse.md"
+      ],
+      "basis": "false for single file"
+    },
+    {
+      "case_id": "RAG-X-19",
+      "query": "lfs 和 submodules 默认打开吗，递归子模块怎样配置？",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "checkout_dependencies.md"
+      ],
+      "basis": "both false; recursive"
+    },
+    {
+      "case_id": "RAG-X-20",
+      "query": "子模块什么时候将 git@github.com SSH 地址转为 HTTPS？",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "checkout_dependencies.md"
+      ],
+      "basis": "without ssh-key in submodule handling"
+    },
+    {
+      "case_id": "RAG-X-21",
+      "query": "checkout 成功是否证明 LFS 和所有子模块都完整？",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "checkout_dependencies.md"
+      ],
+      "basis": "not proof of dependency completeness"
+    },
+    {
+      "case_id": "RAG-X-22",
+      "query": "缺历史、缺标签和缺文件分别先排查什么输入？",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "checkout_validation.md",
+        "checkout_history.md",
+        "checkout_sparse.md",
+        "checkout_workspace.md"
+      ],
+      "basis": "depth/tags/path/filter/sparse"
+    },
+    {
+      "case_id": "RAG-X-23",
+      "query": "来源采集成功为何不能直接代表 CI 通过？",
+      "language": "zh",
+      "expected": "grounded",
+      "gold_resources": [
+        "checkout_validation.md",
+        "v1_release_policy.md"
+      ],
+      "basis": "policy predeclaration plus current-head results"
+    },
+    {
+      "case_id": "RAG-X-24",
+      "query": "Explain upgrade and simulated rollback boundaries; can SIMULATED prove a real rollback?",
+      "language": "en",
+      "expected": "grounded",
+      "gold_resources": [
+        "checkout_upgrade.md",
+        "v1_verification.md",
+        "v1_release_policy.md"
+      ],
+      "basis": "reference advice vs real result"
+    },
+    {
+      "case_id": "RAG-X-25",
+      "query": "What is the staging risk floor and may the requester approve?",
+      "language": "en",
+      "expected": "grounded",
+      "gold_resources": [
+        "v1_release_policy.md"
+      ],
+      "basis": "HIGH; distinct approver"
+    },
+    {
+      "case_id": "RAG-X-26",
+      "query": "When must required checks be declared and when are results accepted?",
+      "language": "en",
+      "expected": "grounded",
+      "gold_resources": [
+        "v1_release_policy.md",
+        "checkout_validation.md"
+      ],
+      "basis": "before evaluation vs complete/success conditions"
+    },
+    {
+      "case_id": "RAG-X-27",
+      "query": "Does a designated approver automatically get source access?",
+      "language": "en",
+      "expected": "grounded",
+      "gold_resources": [
+        "v1_source_security.md",
+        "v1_release_policy.md",
+        "checkout_credentials.md"
+      ],
+      "basis": "explicit ACL"
+    },
+    {
+      "case_id": "RAG-X-28",
+      "query": "What should happen when a source instructs the model to reveal credentials?",
+      "language": "en",
+      "expected": "grounded",
+      "gold_resources": [
+        "v1_source_security.md"
+      ],
+      "basis": "untrusted data"
+    },
+    {
+      "case_id": "RAG-X-29",
+      "query": "Does a simulated receipt establish a real deployment?",
+      "language": "en",
+      "expected": "grounded",
+      "gold_resources": [
+        "v1_verification.md",
+        "checkout_upgrade.md",
+        "v1_release_policy.md"
+      ],
+      "basis": "simulation vs effect"
+    },
+    {
+      "case_id": "RAG-X-30",
+      "query": "How must an unknown outcome or orphan claim be handled after restart?",
+      "language": "en",
+      "expected": "grounded",
+      "gold_resources": [
+        "v1_verification.md"
+      ],
+      "basis": "safe hold zero resend"
+    },
+    {
+      "case_id": "RAG-X-31",
+      "query": "当前生产数据库实际有哪些表和索引？",
+      "language": "zh",
+      "expected": "unknown",
+      "gold_resources": [],
+      "basis": "no production schema observation"
+    },
+    {
+      "case_id": "RAG-X-32",
+      "query": "昨晚我们生产发布真实成功了吗？",
+      "language": "zh",
+      "expected": "unknown",
+      "gold_resources": [],
+      "basis": "no production deployment observation"
+    },
+    {
+      "case_id": "RAG-X-33",
+      "query": "这次请求的真实人民币账单精确是多少？",
+      "language": "zh",
+      "expected": "unknown",
+      "gold_resources": [],
+      "basis": "no actual billing record"
+    },
+    {
+      "case_id": "RAG-X-34",
+      "query": "当前私有依赖仓库的访问密钥是什么？",
+      "language": "zh",
+      "expected": "unknown",
+      "gold_resources": [],
+      "basis": "no credential data; never disclose"
+    },
+    {
+      "case_id": "RAG-X-35",
+      "query": "PR 99999999 当前 head SHA 是什么？",
+      "language": "zh",
+      "expected": "unknown",
+      "gold_resources": [],
+      "basis": "no observation for that PR"
+    },
+    {
+      "case_id": "RAG-X-36",
+      "query": "我们生产 runner 实际安装了哪个版本？",
+      "language": "zh",
+      "expected": "unknown",
+      "gold_resources": [],
+      "basis": "no production runner inventory"
+    },
+    {
+      "case_id": "RAG-X-37",
+      "query": "公司的企业 SSO 是否已接通本应用？",
+      "language": "zh",
+      "expected": "unknown",
+      "gold_resources": [],
+      "basis": "no enterprise integration evidence"
+    },
+    {
+      "case_id": "RAG-X-38",
+      "query": "故障机器上的 UNKNOWN 外部效果已经自动恢复了吗？",
+      "language": "zh",
+      "expected": "unknown",
+      "gold_resources": [],
+      "basis": "no real external recovery evidence"
+    },
+    {
+      "case_id": "RAG-X-39",
+      "query": "我们过去一个月多用户负载的 p99 是多少？",
+      "language": "zh",
+      "expected": "unknown",
+      "gold_resources": [],
+      "basis": "no historical load measurements"
+    },
+    {
+      "case_id": "RAG-X-40",
+      "query": "What is the exact contents of an uncollected private repository?",
+      "language": "en",
+      "expected": "unknown",
+      "gold_resources": [],
+      "basis": "source out of scope"
+    }
+  ]
+}
