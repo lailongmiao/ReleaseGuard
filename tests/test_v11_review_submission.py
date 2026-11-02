@@ -338,8 +338,13 @@ def test_three_process_private_packet_submit_consume(tmp_path, outcome):
         assert acl_result.returncode == 0, acl_result.stderr.decode(errors="replace")
     review.private(directory)
     slot = slot_fixture()
-    (directory / "slot.json").write_text(json.dumps(slot), encoding="utf-8")
-    (directory / "decision.json").write_text(json.dumps(decision_fixture()), encoding="utf-8")
+    slot_path = directory / "slot.json"
+    decision_path = directory / "decision.json"
+    slot_path.write_text(json.dumps(slot), encoding="utf-8")
+    decision_path.write_text(json.dumps(decision_fixture()), encoding="utf-8")
+    if os.name != "nt":
+        slot_path.chmod(0o600)
+        decision_path.chmod(0o600)
     env = {
         **process_env,
         "APP_ENV": "test",
@@ -374,7 +379,7 @@ r.prepare(p,s,'synthetic-review','dataset',datetime.now(UTC)+timedelta(minutes=1
             "--stamp",
             slot["stamp"],
             "--decision",
-            str(directory / "decision.json"),
+            str(decision_path),
         ],
         env=env,
         capture_output=True,
